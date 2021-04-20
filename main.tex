@@ -2,10 +2,11 @@
 \usepackage[T1]{fontenc}
 \usepackage[brazilian]{babel}
 \usepackage[show]{ed}
+\usepackage{hyperref}
 
 \title{Como vamos acabar a dissertação?}
 \author{Geraldo Xexéo}
-\date{April 2021}
+\date{April 2021 - Versão 0.2}
 
 \begin{document}
 
@@ -62,7 +63,7 @@ A prática de trabalho será da seguinte forma:
     \item ao acabar uma sessão de trabalho no Overleaf \textbf{sempre} de commit-\textbf{push} no projeto, isso garantirá que eu não destruo seu trabalho (outros commits podem ser dados durante a sessão);
     \item sempre que acabar uma seção ou subseção de porte, de commit-push com comentário pertinente;
     \item os projetos que estiverem no topo da minha lista terão mais colaboração de minha parte;
-    \item eu comentarei usando o pacote \textbf{ed}, e corrigirei o que for simples
+    \item eu comentarei usando o pacote \textbf{ed}, e corrigirei o que for simples\ednote{O ed funciona assim}\edissue{Com notas e issues};
     \item mantenham o número de \textbf{erros em zero} e o de warnings baixo. Eles aparecem em vermelho (erro) e amarelo (warning). Eu posso ajudar a corrigir quando for estranho para vocês.
     \item eu darei suporte de \LaTeX e bib\LaTeX, e espero que todos se ajudem;
     \item Whatsapp é porta aberta, entrem em contato se quiserem;
@@ -71,6 +72,60 @@ A prática de trabalho será da seguinte forma:
     \item mantenham o GitHub de código atualizado, se não fizerem vou reclamar.
 \end{itemize}
 
+Todos os pacotes tem manual no cite CTAN\footnote{\url{https://ctan.org/}}.
 
+\section{Regras que você não pode esquecer}
+
+Essas são regras importantes que você não pode esquecer:
+
+\begin{itemize}
+    \item você \textbf{não pode copiar imagens direto} se não tiver a licença para isso, o que normalmente você não vai ter para imagens de artigos e livros. Você deve redesenhar e indicar a fonte (ver abaixo);
+    \item plágio é crime.
+\end{itemize}
+
+
+
+\section{Pacotes \LaTeX recomendados}
+
+\begin{itemize}
+    \item \verb!\usepackage{graphicx}!, melhor que o graphics;
+    \item \verb!\usepackage{hyperref}!, que \textbf{obrigatoriamente deve ser o último} chamado;
+\end{itemize}
+
+\section{Dicas}
+
+O site \url{http://www.contornospesquisa.org/2012/08/como-referenciar-figuras-imagens-e.html} explica como referenciar figuras
+
+Temos um grupo de Whatsapp para dúvidas de \LaTeX\footnote{\url{https://chat.whatsapp.com/Kad1ZgFQh1RE8e9PAkcBQA}}, por favor façam essas perguntas por lá, para favorecer a todos. Entrem no grupo!
+
+Não compliquem o uso do \LaTeX, não se percam com detalhes, peçam ajuda. 
+
+As figuras do \LaTeX flutuam mesmo, não se preocupe. Se quiser proibir que elas mudem de seção use o pacote \verb!\usepackage[section]{placeins}!.
+
+Aspas não são feitas com \verb!"! mas sim com \verb!``! no início e \verb!''! no final.
+
+Controle o tamanho das imagens com \verb!\includegraphics[width=0.5\linewidth]{arquivo}! ou \verb!\includegraphics[scale=0.5]{arquivo}! ou outros comandos do pacote \textbf{graphicx}.
+
+Cuidado com as imagens de baixa definição.
+
+\section{Normas ABNT}
+
+Oficialmente você deve seguir as seguintes normas ABNT, porém usar o estilo CoppeTeX é quase tudo que precisa:
+\begin{itemize}
+    \item ABNT NBR 6023, Informação e documentação – Referências – Elaboração
+\item ABNT NBR 6024, Informação e documentação – Numeração progressiva das seções de um documento
+escrito – Apresentação
+\item ABNT NBR 6027, Informação e documentação – Sumário – Apresentação
+\item ABNT NBR 6028, Informação e documentação – Resumo – Procedimento
+\item ABNT NBR 6034, Informação e documentação – Índice – Apresentação
+\item ABNT NBR 10520, Informação e documentação – Citações em documentos – Apresentação
+\item ABNT NBR 12225, Informação e documentação – Lombada – Apresentação
+\item Código de Catalogação Anglo-Americano. 2. ed. rev. 2002. São Paulo: FEBAB, 2004
+\item IBGE. Normas de apresentação tabular. 3. ed. Rio de Janeiro, 1993
+\end{itemize}
+
+\section{Ajuda!}
+
+O que você gostaria de ver nesse documento? 
 
 \end{document}
