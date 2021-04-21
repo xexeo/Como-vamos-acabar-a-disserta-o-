@@ -1,12 +1,20 @@
 \documentclass{article}
 \usepackage[T1]{fontenc}
+\usepackage{csquotes}
 \usepackage[brazilian]{babel}
 \usepackage[show]{ed}
+\usepackage{hacksxexeo}
+\usepackage[normalem]{ulem}
+\usepackage[natbib]{biblatex}
+\usepackage{outline}
 \usepackage{hyperref}
+
+
+\addbibresource{bib.bib}
 
 \title{Como vamos acabar a dissertação?}
 \author{Geraldo Xexéo}
-\date{April 2021 - Versão 0.2}
+\date{April 2021 - Versão 0.4}
 
 \begin{document}
 
@@ -16,33 +24,73 @@
 
 Esse documento apresenta as regras para os alunos de 2017/1 que vão tentar acabar sua dissertação de mestrado, aproveitando o perdão da pandemia.
 
+Não esqueça de ler o \textbf{Guia dos Orientados}\footnote{\url{http://www.xexeo.net/ensino/guia-dos-orientados/}}. Esse documento é uma extensão para esse momento de finalizar a dissertação, onde vamos usar algumas regras mais fortes.
+
 \section{Estrutura de troca de informações}
 
 \begin{itemize}
     \item Você precisa obrigatoriamente ter compartilhado comigo:
     \begin{itemize}
-        \item um projeto Overleaf usando o formato CoopeTex. Esse arquivo pode ser criado por mim para facilitar o compartilhamento;
-        \item um repositório GitHub sincronizado com esse projeto, criado a partir do Overleaf, novamente criado por mim;
+        \item um projeto Overleaf usando o formato CoppeTex \footnote{\url{https://github.com/COPPE-UFRJ/CoppeTeX}}. Esse arquivo pode ser criado por mim para facilitar o compartilhamento;
+        \item um repositório GitHub sincronizado com esse projeto, criado a partir do Overleaf, novamente pode criado por mim;
         \item um repositório de código, criado por você, no GitHub (eu prefiro) ou no GitLab;
         \item um diretório no Google Drive, criado por mim, para troca de artigos e etc;
-        \item um arquivo TODO nesse diretório, que já foi criado para alguns alunos. Em toda reunião esse arquivo deve ser editado por vocês. Aqueles que mantém uma outra forma deverão atualizar pós reunião, para ser usado na próxima.
+        \item um arquivo TODO nesse diretório, que já foi criado para alguns alunos. Em toda reunião esse arquivo deve ser editado por vocês. Aqueles que mantém uma outra forma deverão atualizar pós reunião, para ser usado na próxima;
+        \item ter acesso a pasta Comuns onde colocarei material de interesse de todos.
     \end{itemize}
     \item Você pode ter compartilhado comigo, sendo preferencial que tenha:
     \begin{itemize}
         \item um projeto Overleaf usando um formato de artigo, para escrever um artigo em inglês sobre seu trabalho, com minha ajuda;
         \item um repositório GitHub sincronizado com este projeto;
     \end{itemize}
-    \item São obrigatórios as seguintes configurações nos projetos Overleaf:
+\end{itemize}
+
+\section{Configuração do Overleaf}    
+    
+     São obrigatórios as seguintes configurações nos projetos Overleaf:
     \begin{itemize}
-        \item \textbf{fontencode} com a configuração \verb!\usepackage[T1]{fontenc}!
-        \item \textbf{babel} com a configuração \verb!\usepackage[english, brazilian]{babel}! para textos em português ou \verb!\usepackage[brazilian,english]{babel}! para textos em inglês. Sim, é nessa ordem.
-        \item \textbf{ed} com a configuração \verb!\usepackage[show]{ed}!
+
         \item usar o processador \textbf{LuaLaTeX}, que é mais poderoso, configuração no Menu do projeto, e dispensa configurar para usar utf-8, que é natural dele.
-        \item usar o \textbf{bibLaTeX} e não o bibTeX, configuração no Menu do projeto.
-    \end{itemize}
+        \item \sout{usar o \textbf{bibLaTeX} e não o bibTeX}\footnote{ esta configuração está dando problema, que tentaremos corrigir}.
+    
 \end{itemize}
 
 
+\section{Como escrever a dissertação}
+
+Sua dissertação deve ter 5 ou 7 capítulos, nas seguintes opções, com no máximo 80 páginas de texto.
+
+\begin{itemize}
+    \item com sete capítulos
+    \begin{enumerate}
+        \item Introdução
+        \item Revisão da área do problema
+        \item Revisão das técnicas de solução
+        \item Proposta Teórica
+        \item Proposta Técnica, Arquitetura
+        \item Experimento 
+        \item Conclusão
+    \end{enumerate}
+    \item com cinco capítulos
+    \begin{enumerate}
+        \item Introdução
+        \item Revisão
+        \item Proposta
+        \item Experimentos
+        \item Conclusão
+    \end{enumerate}
+    
+Você pode escrever do início para o fim se não tem nada, mas se tem resultados é melhor escrever do fim para início, para poupar a escrita da revisão no que é objetivo e foi usado.
+
+Para escrever, cada capítulo e seção tem que ter início, meio e fim. Vocês devem construir um desenho ou delinear em texto o que vão escrever para orientar a escrita, de forma a apresentar e concluir (quase) tudo que fizeram.
+
+Uma técnica que eu sugiro é olhar um dos  livros de \citeauthor{minto1}:  \citetitle{minto1}\citep{minto1} ou \citetitle{minto2}\citep{minto2}. E não custa nada ler \citetitle{wcs}\citep{wcs}.
+
+Lembrar que o texto tem que ser encadeado. Não dizer ``João disse X. Maria disse Y'', dizer ``João disse X, porém Maria discordou e disse Y''.
+    
+    
+    
+\end{itemize}
 
 
 \section{O que será avaliado}
@@ -85,32 +133,29 @@ Essas são regras importantes que você não pode esquecer:
 
 
 
-\section{Pacotes \LaTeX recomendados}
+\section{Pacotes \LaTeX\  obrigatórios e recomendados}
+
+Os seguintes pacotes são obrigatórios:
 
 \begin{itemize}
+    \item \textbf{ed} com a configuração \verb!\usepackage[show]{ed}!, que é obrigatório para o hacksxexeo.
+        \item \textbf{hacksxexeo} com a configuração \verb!\usepackage{hacksxexeo}!, disponível em \url{https://github.com/xexeo/hacksxexeo}
+\end{itemize}
+    
+Os seguintes pacotes são recomendados, para ser usados quando necessários:    
+        
+\begin{itemize}
     \item \verb!\usepackage{graphicx}!, melhor que o graphics;
-    \item \verb!\usepackage{hyperref}!, que \textbf{obrigatoriamente deve ser o último} chamado;
+    \item \verb!\usepackage{hyperref}!, que \textbf{obrigatoriamente deve ser o último} chamado, para criar links e tratar urls;
+    \item se necessário, a família dos pacotes de matemática da AMS, \verb!\usepackage{amsmath}! e
+    \verb!\usepackage{amsfonts}!, \verb!\usepackage{amssymb}!, e \verb!\usepackage{amsthm}!.
 \end{itemize}
 
-\section{Dicas}
 
-O site \url{http://www.contornospesquisa.org/2012/08/como-referenciar-figuras-imagens-e.html} explica como referenciar figuras
-
-Temos um grupo de Whatsapp para dúvidas de \LaTeX\footnote{\url{https://chat.whatsapp.com/Kad1ZgFQh1RE8e9PAkcBQA}}, por favor façam essas perguntas por lá, para favorecer a todos. Entrem no grupo!
-
-Não compliquem o uso do \LaTeX, não se percam com detalhes, peçam ajuda. 
-
-As figuras do \LaTeX flutuam mesmo, não se preocupe. Se quiser proibir que elas mudem de seção use o pacote \verb!\usepackage[section]{placeins}!.
-
-Aspas não são feitas com \verb!"! mas sim com \verb!``! no início e \verb!''! no final.
-
-Controle o tamanho das imagens com \verb!\includegraphics[width=0.5\linewidth]{arquivo}! ou \verb!\includegraphics[scale=0.5]{arquivo}! ou outros comandos do pacote \textbf{graphicx}.
-
-Cuidado com as imagens de baixa definição.
 
 \section{Normas ABNT}
 
-Oficialmente você deve seguir as seguintes normas ABNT, porém usar o estilo CoppeTeX é quase tudo que precisa:
+Oficialmente você deve seguir as seguintes normas ABNT, porém usar o estilo CoppeTex \footnote{\url{https://github.com/COPPE-UFRJ/CoppeTeX}}é quase tudo que precisa:
 \begin{itemize}
     \item ABNT NBR 6023, Informação e documentação – Referências – Elaboração
 \item ABNT NBR 6024, Informação e documentação – Numeração progressiva das seções de um documento
@@ -124,8 +169,40 @@ escrito – Apresentação
 \item IBGE. Normas de apresentação tabular. 3. ed. Rio de Janeiro, 1993
 \end{itemize}
 
-\section{Ajuda!}
+\section{Estilo hacksxexeo}
 
+O estilo \textbf{hacksxexeo} é obrigatório e usado com o comando \verb!\usepackage{hacksxexeo}!, e está disponível em \url{https://github.com/xexeo/hacksxexeo}. Ele exige os pacotes \textbf{ed} e \textbf{xcolor}, que devem ser carregados antes com as suas opções desejadas, já que no momento ele não altera as opções.
+
+O seguinte código deve ser usado no seu texto para comentários coloridos \prof{Meu comentário}\cand{seu comentário}, com os comandos \verb!\prof{comentário}! e \verb!\cand{comentário}!:
+
+Também podem ser colocados textos com cor para ressaltar como sugestão, ou outra coisa (comentar com os comandos anteriores) com os comandos \verb!\profsug{texto}! e
+\verb!\candsug{text}!.
+
+Deve funcionar \profsug{como estou mostrando nesse parágrafo, aqui com a minha sugestão} e \candsug{aqui como ficaria a sua}.
+
+Esse pacote será aprimorado e vou avisar quando precisar atualizá-lo, por exemplo com \textit{environments} coloridos.
+
+A motivação desse pacote é que nenhum pacote para edição ou colaboração atende minhas vontades arbitrárias.
+
+\section{Dicas}
+\begin{outline}
+\1 Dicas de escrita
+\2 O site \url{http://www.contornospesquisa.org/2012/08/como-referenciar-figuras-imagens-e.html} explica como referenciar figuras
+\1 Dicas de \LaTeX
+\2 Temos um grupo de Whatsapp para dúvidas de \LaTeX\footnote{\url{https://chat.whatsapp.com/Kad1ZgFQh1RE8e9PAkcBQA}}, por favor façam essas perguntas por lá, para favorecer a todos. Entrem no grupo!
+\2 Não compliquem o uso do \LaTeX, não se percam com detalhes, peçam ajuda. 
+\2 As figuras e tabelas, e todos os flutuantes, do \LaTeX flutuam mesmo, \textbf{não se preocupe}. 
+\2 Se quiser proibir que figuras e tabelas mudem de seção use o pacote \verb!\usepackage[section]{placeins}!, também aconselho a usar sempre \verb!\begin{figure}[hbt]!, que tenta colocar no local, no fim da página ou no topo.
+\2 Aspas não são feitas com \verb!"! mas sim com \verb!``! no início e \verb!''! no final.
+\2 Controle o tamanho das imagens com \verb!\includegraphics[width=0.5\linewidth]{arquivo}! ou \verb!\includegraphics[scale=0.5]{arquivo}! ou outros comandos do pacote \textbf{graphicx}.
+\2 Cuidado com as imagens de baixa definição. 
+\2 Usando o pacote \textbf{ulem} e o \textbf{hacksxexeo} é possível cortar um texto! \profsug{\sout{Por exemplo, cortei esse aqui.}}
+\end{outline}
+\section{Ajuda!}
 O que você gostaria de ver nesse documento? 
+\section{Agradecimento}
+Agradeço aos alunos que colaboraram revisando este documento. Ele está disponível em: 
+
+\printbibliography
 
 \end{document}
