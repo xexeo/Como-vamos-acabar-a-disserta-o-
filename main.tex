@@ -7,6 +7,7 @@
 \usepackage[normalem]{ulem}
 \usepackage[natbib]{biblatex}
 \usepackage{outlines}
+\usepackage{booktabs}
 \usepackage{hyperref}
 
 
@@ -14,19 +15,35 @@
 
 \title{Como vamos acabar a dissertação?}
 \author{Geraldo Xexéo}
-\date{April 2021 - Versão 0.5}
+\date{April 2021 - Versão 0.7}
 
 \begin{document}
 
 \maketitle
-
+\tableofcontents
 \section{Introdução}
 
 Esse documento apresenta as regras para os alunos de 2017/1 que vão tentar acabar sua dissertação de mestrado, aproveitando o perdão da pandemia.
 
 Não esqueça de ler o \textbf{Guia dos Orientados}\footnote{\url{http://www.xexeo.net/ensino/guia-dos-orientados/}}. Esse documento é uma extensão para esse momento de finalizar a dissertação, onde vamos usar algumas regras mais fortes.
 
-\section{Estrutura de troca de informações}
+\section{Nosso trabalho conjunto}
+
+\subsection{O que será avaliado}
+
+O andamento será da seguinte forma:
+\begin{itemize}
+    \item toda semana vamos nos encontrar, a menos de problemas pessoais;
+    \item o texto da dissertação tem que evoluir toda a semana, a avaliação básica será sobre essa evolução;
+    \item toda semana terá um acordo básico do que deve ser feito, que, mesmo que não explicitado, inclui evoluir o texto da dissertação;
+    \item espera-se que o acordo seja cumprido, porém entende-se que alguns podem ser mais longos que 1 semana, e deverá ser cumprido parcialmente.
+\end{itemize}
+
+A avaliação  será feita em função de vocês cumprirem ou não o ritmo de trabalho.
+
+\subsection{Estrutura de troca de informações}
+
+Para que tudo funcione, será estabelecida uma estrutura específica para nossa colaboração, e que você deverá usar para escrever sua dissertação.
 
 \begin{itemize}
     \item Você precisa \textbf{obrigatoriamente} ter compartilhado comigo:
@@ -45,18 +62,52 @@ Não esqueça de ler o \textbf{Guia dos Orientados}\footnote{\url{http://www.xex
     \end{itemize}
 \end{itemize}
 
-\section{Configuração do Overleaf}    
-    
-     São obrigatórios as seguintes configurações nos projetos Overleaf:
-    \begin{itemize}
 
-        \item usar o processador \textbf{LuaLaTeX}, que é mais poderoso, configuração no Menu do projeto, e dispensa configurar para usar utf-8, que é natural dele.
-        \item \sout{usar o \textbf{bibLaTeX} e não o bibTeX}\footnote{ esta configuração está dando problema, que tentaremos corrigir}.
-    
+\subsection{Prática de Trabalho}
+
+De forma a possibilitar a nossa colaboração, a prática de trabalho será da seguinte forma:
+
+\begin{itemize}
+    \item ao acabar uma sessão de trabalho no Overleaf \textbf{sempre} de commit-\textbf{push} no projeto, isso garantirá que eu não destruo seu trabalho (outros commits podem ser dados durante a sessão);
+    \item sempre que acabar uma seção ou subseção de porte, de commit-push com comentário pertinente;
+    \item os projetos que estiverem no topo da minha lista terão mais colaboração de minha parte;
+    \item eu comentarei usando os pacotes \textbf{ed} e \textbf{hacksxexeo}, e corrigirei o que for simples\ednote{O ed funciona assim}\edissue{Com notas e issues};
+    \item mantenham o número de \textbf{erros em zero} e o de warnings baixo. Eles aparecem em vermelho (erro) e amarelo (warning). Eu posso ajudar a corrigir quando for estranho para vocês.
+    \item eu darei suporte de \LaTeX e bib\LaTeX, e espero que todos se ajudem;
+    \item problemas genéricos de \LaTeX devem ser colocados no grupo de WhatsApp ``\LaTeX ers no PESC''\footnote{\url{https://chat.whatsapp.com/Kad1ZgFQh1RE8e9PAkcBQA}}, para que a solução ajude a todos;
+    \item Whatsapp é porta aberta, entrem em contato se quiserem;
+    \item perguntas cuja resposta pode favorecer a todos os orientados devem ser feitas no grupo de Orientados do WhatApp;
+    \item evitar e-mail para mim;
+    \item mantenham o GitHub de código atualizado, se não fizerem vou reclamar.
 \end{itemize}
 
+Todos os pacotes \LaTeX tem manual no site CTAN\footnote{\url{https://ctan.org/}}.
 
-\section{Como escrever a dissertação}
+\subsection{O que fazer com meus comentários}
+
+Eu farei vários tipos de comentários, que o aluno deve tratar caso a caso. Os comentários coloridos tem duas funções: servir como comentários de coisas a serem feitas e também servir de diálogo. Com o uso a aluna vai entender melhor o que fazer em cada caso.
+
+Seguem algumas instruções gerais, para balizar a decisão:
+\begin{itemize}
+    \item pedidos de incluir referência, quando atendidos, podem ser apagados;
+    \item pedidos de explicação de algo, é melhor colocar um comentário seu logo depois e eu apagar os dois se ficar satisfeito;
+    \item comentários que avisam de uma mudança ou que indicam um erro e pedem solução, podem ser apagados se resolvidos. Possivelmente você pode colocar um comentário no lugar dele, se foi algo complicado.
+\end{itemize}
+
+\section{Regras que você não pode esquecer - O Plágio!}
+
+Essas são regras importantes que você não pode esquecer:
+
+\begin{itemize}
+    \item você \textbf{não pode copiar imagens direto} se não tiver a licença para isso, o que normalmente você não vai ter para imagens de artigos e livros. Você deve redesenhar e indicar a fonte (ver abaixo);
+    \item plágio é crime.
+\end{itemize}
+
+\section{A escrita}
+
+\subsection{Como escrever a dissertação}
+
+Essa subseção define regras \textbf{obrigatórias} para a escrita da dissertação.
 
 Sua dissertação deve ter 5 ou 7 capítulos, nas seguintes opções, com no máximo 80 páginas de texto.
 
@@ -80,88 +131,97 @@ Sua dissertação deve ter 5 ou 7 capítulos, nas seguintes opções, com no má
         \item Conclusão
     \end{enumerate}
 
+Os \textbf{tempos de verbo} a serem usados na dissertação são:
+\begin{itemize}
+    \item a introdução é no presente, como em ``Esse trabalho explora'';
+    \item a revisão é no passado quando cita, mas no presente quando analisa e conclui.
+    \item a proposta é no presente;
+    \item os experimentos são descritos no passado, pois são o resultado de algo já feito, e
+    \item a conclusão é no passado, como em ``Esse trabalho explorou'';
+\end{itemize}
+
+ \textbf{Toda figura e tabela tem que estar citada no texto}, e só pode aparecer a partir da página onde a citação é feita. Isso significa que ela pode aparecer antes da citação se for na mesma página (o que é a opção \verb!t! do ambiente \verb!figure!). O \LaTeX\ faz isso automaticamente, se for usado corretamente.
+  
+Legendas de tabela são sobre a tabela, de figuras são sob a figura. Você tem que fazer isso na mão, não é automático.
+
 \subsection{Dicas para escrever}
     
 Você pode escrever do início para o fim se não tem nada, mas se tem resultados é melhor escrever do fim para início, para poupar a escrita da revisão no que é objetivo e foi usado.
 
-Para escrever, cada capítulo e seção tem que ter início, meio e fim. Vocês devem construir um desenho ou delinear em texto o que vão escrever para orientar a escrita, de forma a apresentar e concluir (quase) tudo que fizeram.
-
+Para escrever, cada capítulo e seção tem que ter início, meio e fim. Vocês devem construir um desenho ou delinear em texto o que vão escrever para orientar a escrita, de forma a apresentar e concluir (quase) tudo que fizeram. 
+O Método da Pirâmide\citep{minto1,minto2} segue esse princípio de forma \textit{top-down} e é muito eficiente para a criação de textos formais.
 
 Lembrar que o texto tem que ser encadeado. Não dizer ``João disse X. Maria disse Y'', dizer ``João disse X, porém Maria discordou e disse Y''.
-    
+
+Não se pode afirmar nada sem se apoiar em uma informação factual ou que não seja uma conclusão. Você não pode dizer ``muita gente usa relógio'', tem que dizer ``\verb!\citet{joaozinho2020}! mostra que 60\% da população brasileira usa relógio!''.
+
+Você não pode achar, tem que concluir racionalmente ou declarar uma premissa explícita, como em ``Esse trabalho parte da premissa que quem tem relógio quer saber as horas''. A premissa pode ser questionada pelo leitor, mas a construção do trabalho é feita sobre a premissa. Já vi bancas onde o membro falou ``discordo da sua premissa, mas sei que seu orientador segue essa linha e vou avaliar considerando ela válida''.
+
+\subsection{Cuidados ao escrever}
+
+O texto deve ser exclusivemente científico, porém devemos:
+\begin{itemize}
+    \item ter o cuidado de gerar um texto inclusivo em gênero. Em inglês usar a terceira pessoa do plural evita determinar o gênero. Já em português temos que apelar para construções com ``ele/ela'', voz passiva ou outra;
+    \item mesmo tecnicamente, ter cuidado quando falar de religiões, principalmente de forma específica. Um leitor ou um membro da banca mais religioso pode se ofender com comentários ou mesmo com fatos;
+    \item ter cuidado com a citação, principalmente a direta, de autores antigos, ou autores reconhecidamente racistas, fascistas, etc,, principalmente sem contextualiza-los no tempo.
+    \item ter cuidado com usar fontes não científicas como evidência, por exemplo a Wikipédia. Essas fontes podem ser usadas como curiosidade ou como um passo para atingir fontes interessantes. 
+\end{itemize}
+
+
+\subsection{Dicas de formatação}
+
+Apesar muitos textos usarem tabelas com todas as linhas verticais e horizontais, como na Figura \ref{tab:tab3}, pense em não usá-las, como na Figura \ref{tab:tab4}. \citeauthor{ei} recomenda que devemos dar importância aos dados, não a decoração das tabelas.
+
+
+\begin{table}[htb]
+    \centering
+        \caption{Exemplo de uma tabela normal do \LaTeX .}
+    \begin{tabular}{|c|c|c|}
+    \hline
+        1,1 & 1,2 & 1,3   \\
+        \hline
+        2,1 & 2,2 & 2,3\\
+        \hline
+        3,1 & 3,2 & 3,3\\
+        \hline
+        4,1 & 4,2 & 4,3\\
+        \hline
+        5,1 & 5,2 & 5,3\\
+        \hline
+    \end{tabular}
+
+    \label{tab:tab3}
+\end{table}
+
+\begin{table}[htb]
+    \centering
+        \caption{Exemplo de uma tabela sem muitas linhas do \LaTeX .}
+    \begin{tabular}{ccc}
+    \hline
+        1,1 & 1,2 & 1,3   \\
+        2,1 & 2,2 & 2,3\\
+        3,1 & 3,2 & 3,3\\
+        4,1 & 4,2 & 4,3\\
+        5,1 & 5,2 & 5,3\\
+        \hline
+    \end{tabular}\label{tab:tab4}
+\end{table}
+
+Em alguns lugares se separa \textbf{Tabela} de \textbf{Quadro}, tanto em conteúdo e forma, uma tabela tem dados quantitativos, geralmente números, um quadro tem dados qualitativos, como informações. Na norma, na verdade um documento do IBGE\citep{nat}, as tabelas apresentam bordas laterais abertas, e não precisam de todas as linhas internas. \textbf{Na Coppe}, porém, \textbf{as normas não exigem essa distinção}, e nem citam a existência de quadros. 
+
 \subsection{Livros sobre como escrever}    
+
+\textbf{Não deixe de ler} pelo menos o primeiro capítulo de \citetitle{mw}\citep{mw}.
 
 Uma técnica que eu sugiro é olhar um dos  livros de \citeauthor{minto1}:  \citetitle{minto1}\citep{minto1} ou \citetitle{minto2}\citep{minto2}. 
 
 Uma boa leitura também é \citetitle{wcs}\citep{wcs}.
 
-    
-\end{itemize}
+Sobre como fazer gráficos, diagramas, tabelas, já citei \citetitle{ei}\citep{ei} e recomendo qualquer livro de \citeauthor{ei}.
 
+\subsection{Normas ABNT}
 
-\section{O que será avaliado}
-
-O andamento será da seguinte forma:
-\begin{itemize}
-    \item toda semana vamos nos encontrar, a menos de problemas pessoais;
-    \item o texto da dissertação tem que evoluir toda a semana, a avaliação básica será sobre essa evolução;
-    \item toda semana terá um acordo básico do que deve ser feito, que, mesmo que não explicitado, inclui evoluir o texto da dissertação;
-    \item espera-se que o acordo seja cumprido, porém entende-se que alguns podem ser mais longos que 1 semana, e deverá ser cumprido parcialmente.
-\end{itemize}
-
-\section{Prática de Trabalho}
-
-A prática de trabalho será da seguinte forma:
-
-\begin{itemize}
-    \item ao acabar uma sessão de trabalho no Overleaf \textbf{sempre} de commit-\textbf{push} no projeto, isso garantirá que eu não destruo seu trabalho (outros commits podem ser dados durante a sessão);
-    \item sempre que acabar uma seção ou subseção de porte, de commit-push com comentário pertinente;
-    \item os projetos que estiverem no topo da minha lista terão mais colaboração de minha parte;
-    \item eu comentarei usando o pacote \textbf{ed}, e corrigirei o que for simples\ednote{O ed funciona assim}\edissue{Com notas e issues};
-    \item mantenham o número de \textbf{erros em zero} e o de warnings baixo. Eles aparecem em vermelho (erro) e amarelo (warning). Eu posso ajudar a corrigir quando for estranho para vocês.
-    \item eu darei suporte de \LaTeX e bib\LaTeX, e espero que todos se ajudem;
-    \item Whatsapp é porta aberta, entrem em contato se quiserem;
-    \item perguntas cuja resposta pode favorecer a todos devem ser feitas no grupo de Orientados do WhatApp;
-    \item evitar e-mail;
-    \item mantenham o GitHub de código atualizado, se não fizerem vou reclamar.
-\end{itemize}
-
-Todos os pacotes tem manual no site CTAN\footnote{\url{https://ctan.org/}}.
-
-\section{Regras que você não pode esquecer}
-
-Essas são regras importantes que você não pode esquecer:
-
-\begin{itemize}
-    \item você \textbf{não pode copiar imagens direto} se não tiver a licença para isso, o que normalmente você não vai ter para imagens de artigos e livros. Você deve redesenhar e indicar a fonte (ver abaixo);
-    \item plágio é crime.
-\end{itemize}
-
-
-
-\section{Pacotes \LaTeX\  obrigatórios e recomendados}
-
-Os seguintes pacotes são obrigatórios:
-
-\begin{itemize}
-    \item \textbf{ed} com a configuração \verb!\usepackage[show]{ed}!, que é obrigatório para o hacksxexeo.
-        \item \textbf{hacksxexeo} com a configuração \verb!\usepackage{hacksxexeo}!, disponível em \url{https://github.com/xexeo/hacksxexeo}
-\end{itemize}
-    
-Os seguintes pacotes são recomendados, para ser usados quando necessários:    
-        
-\begin{itemize}
-    \item \verb!\usepackage{graphicx}!, melhor que o graphics;
-    \item \verb!\usepackage{hyperref}!, que \textbf{obrigatoriamente deve ser o último} chamado, para criar links e tratar urls;
-    \item se necessário, a família dos pacotes de matemática da AMS, \verb!\usepackage{amsmath}! e
-    \verb!\usepackage{amsfonts}!, \verb!\usepackage{amssymb}!, e \verb!\usepackage{amsthm}!.
-\end{itemize}
-
-
-
-\section{Normas ABNT}
-
-Oficialmente você deve seguir as seguintes normas ABNT, porém usar o estilo CoppeTex \footnote{\url{https://github.com/COPPE-UFRJ/CoppeTeX}}é quase tudo que precisa:
+Oficialmente você deve seguir as seguintes normas ABNT, porém usar o estilo CoppeTex\footnote{\url{https://github.com/COPPE-UFRJ/CoppeTeX}} é quase tudo que precisa:
 \begin{itemize}
     \item ABNT NBR 6023, Informação e documentação – Referências – Elaboração
 \item ABNT NBR 6024, Informação e documentação – Numeração progressiva das seções de um documento
@@ -176,8 +236,69 @@ escrito – Apresentação
 \end{itemize}
 
 Todas as normas estão disponíveis no diretório Comuns no Google Drive.
+    
+\end{itemize}
 
-\section{Estilo hacksxexeo}
+
+
+
+
+\section{O \LaTeX}
+
+\subsection{Pacotes \LaTeX\  obrigatórios e recomendados}
+
+Os seguintes pacotes são obrigatórios:
+
+\begin{itemize}
+    \item \textbf{ed} com a configuração \verb!\usepackage[show]{ed}!, que é obrigatório para o hacksxexeo.
+        \item \textbf{hacksxexeo} com a configuração \verb!\usepackage{hacksxexeo}!, disponível em \url{https://github.com/xexeo/hacksxexeo}
+\end{itemize}
+    
+Os seguintes pacotes são recomendados, para ser usados quando necessários:    
+        
+\begin{itemize}
+    \item \verb!\usepackage{graphicx}!, melhor que o graphics;
+    \item \verb!\usepackage{hyperref}!, que \textbf{obrigatoriamente deve ser o último} chamado, para criar links e tratar urls;
+    \item \verb!\usepackage{booktabs}! que fornece linhas mais elegantes para as tabelas (\verb!\toprule!,\verb!\midrule!,\verb!\bottomrule!), as figuras \ref{tab:tab2} e \ref{tab:tab1} mostram a diferença.
+    \item se necessário, a família dos pacotes de matemática da AMS, \verb!\usepackage{amsmath}! e
+    \verb!\usepackage{amsfonts}!, \verb!\usepackage{amssymb}!, e \verb!\usepackage{amsthm}!.
+\end{itemize}
+
+\begin{table}[htb]
+    \centering
+        \caption{Exemplo de uma tabela normal do \LaTeX .}
+    \begin{tabular}{cc}
+    \hline
+        1 & Exemplo de linhas normais   \\
+        \hline
+        2 & linha 1\\
+        3 & linha 2\\
+        \hline
+    \end{tabular}
+
+    \label{tab:tab2}
+\end{table}
+
+\begin{table}[htb]
+    \centering
+        \caption{Exemplo do uso do pacote \textbf{booktabs} }
+    \begin{tabular}{cc}
+    \toprule
+        1 & Exemplo de linhas mais elegantes   \\
+        \midrule
+        2 & linha 1\\
+        3 & linha 2\\
+        \bottomrule
+    \end{tabular}
+
+    \label{tab:tab1}
+\end{table}
+
+
+
+
+
+\subsection{Estilo hacksxexeo}
 
 O estilo \textbf{hacksxexeo} é obrigatório e usado com o comando \verb!\usepackage{hacksxexeo}!, e está disponível em \url{https://github.com/xexeo/hacksxexeo}. Ele exige os pacotes \textbf{ed} e \textbf{xcolor}, que devem ser carregados antes com as suas opções desejadas, já que no momento ele não altera as opções.
 
@@ -192,20 +313,56 @@ Esse pacote será aprimorado e vou avisar quando precisar atualizá-lo, por exem
 
 A motivação desse pacote é que nenhum pacote para edição ou colaboração atende minhas vontades arbitrárias.
 
-\section{Dicas}
+\subsection{Errors e Warnings}
+
+Um erro não pode ser deixado no programa, porque não sabemos o que ele pode produzir. Mesmo que a saída não esteja sendo alterada, mais tarde isso pode não ser verdade.
+
+Warnings podem ser deixados, se compreendemos o que está acontecendo.
+
+Mensagens de \textit{Overfull}, que são azuis no Overleaf, indicam que provavelmente alguma coisa saiu das bordas laterais. COmo o valor é em pontos, e um ponto equivale a um pouco mais de  $0.035$ centímetros, erros pequenos provavelmente não são vistos.
+
+Mensagens \textit{Underfull}, também azuis no Overleaf, normalmente significam que tem um buraco na sua diagramação. Novamente, pela medida podemos pensar se devemos nos preocupar ou não.
+
+Uma inspeção visual nas bordas e na diagramação geral do documento rapidamente indicam onde estão os problemas mais importantes.
+
+Nesse documento, por exemplo, a url que aponta o documento sobre como referenciar figuras deu um erro de $130.28$ pontos, aproximadamente $4.59$ cm, o que provocou que ela saísse não só das bordas da linha, mas também da borda do papel.
+
+\subsection{Configuração do Overleaf}    
+    
+     São obrigatórios as seguintes configurações nos projetos Overleaf:
+    \begin{itemize}
+        \item \sout{usar o processador \textbf{Lua\LaTeX}, que é mais poderoso, configuração no Menu do projeto, e dispensa configurar para usar utf-8, que é natural dele.}\footnote{Esta configuração está dando problema de \textit{timeout} no Overleaf. O Lua\LaTeX\ é realmente mais lento.  }
+        \item \sout{usar o \textbf{bibLaTeX} e não o bibTeX}\footnote{ Esta configuração está dando problema, que tentaremos corrigir}.
+    
+\end{itemize}
+
+\section{Dicas Gerais}
 \begin{outline}
-\1 Dicas de escrita
-\2 O site \url{http://www.contornospesquisa.org/2012/08/como-referenciar-figuras-imagens-e.html} explica como referenciar figuras
+\1 Dicas de organização do documento \LaTeX:
+\2 Escreva cada frase do parágrafo em uma linha do arquivo, isso facilitará encontrar os erros.
+\2 Não quebre muito o seu arquivo se não for necessário. Capítulos pequenos não precisam ter várias partes.
+\2 Numere os nomes dos arquivos de capítulos e seções de forma que fiquem na sequência certa no diretório do Overleaf, como em: 00Introducao.tex, 01Motivacao.tex, 02OProblema.tex.
+\1 Dicas de escrita:
+\2 Não faça promessas que não são indicadas onde elas são cumpridas. Ou seja, não escreva ``será apresentado'', mas sim ``o capítulo 5 apresenta''.
+\2 O site \url{http://www.contornospesquisa.org/2012/08/como-referenciar-figuras-imagens-e.html} explica como referenciar figuras;
+\2 O documento \url{https://i0.statig.com.br/educacao/trabalhosacademicos/Recomendacoes_elaboracao_monografia.pdf} tem algumas recomendações interessantes, e
+\2 recomendo que todas as palavras em outra língua estejam em itálico.
 \1 Dicas de \LaTeX
 \2 Temos um grupo de Whatsapp para dúvidas de \LaTeX\footnote{\url{https://chat.whatsapp.com/Kad1ZgFQh1RE8e9PAkcBQA}}, por favor façam essas perguntas por lá, para favorecer a todos. Entrem no grupo!
 \2 Não compliquem o uso do \LaTeX, não se percam com detalhes, peçam ajuda. 
-\2 As figuras e tabelas, e todos os flutuantes, do \LaTeX flutuam mesmo, \textbf{não se preocupe}. 
-\2 Se quiser proibir que figuras e tabelas mudem de seção use o pacote \verb!\usepackage[section]{placeins}!, também aconselho a usar sempre \verb!\begin{figure}[hbt]!, que tenta colocar no local, no fim da página ou no topo.
+\2 As figuras e tabelas, e todos os flutuantes, do \LaTeX flutuam mesmo, \textbf{não se preocupe} até o momento final da impressão, onde podemos tentar resolver. 
+\2 Se quiser proibir que figuras e tabelas mudem de seção use o pacote \verb!\usepackage[section]{placeins}!, também aconselho a usar sempre \verb!\begin{figure}[hbt]!, que tenta colocar no local, no fim da página ou no topo. 
+\3 Não gosto da opção \verb!H! do pacote \textbf{float}, porque pouco resolve o problema e às vezes gera outros. Só recomendo usar na edição final para entregar, se quiser resolver algum problema mais grave. Sempre evite usar o \verb!H!.
 \2 Aspas não são feitas com \verb!"! mas sim com \verb!``! no início e \verb!''! no final.
-\2 Controle o tamanho das imagens com \verb!\includegraphics[width=0.5\linewidth]{arquivo}! ou \verb!\includegraphics[scale=0.5]{arquivo}! ou outros comandos do pacote \textbf{graphicx}.
-\2 Cuidado com as imagens de baixa definição. 
+\2 Controle o tamanho das imagens com as opções do comando \textbf{includegraphics}, como em: \verb!\includegraphics[width=0.5\linewidth]{arquivo}!, \verb!\includegraphics[scale=0.5]{arquivo}!, ou outros comandos do pacote \textbf{graphicx}.
+\2 Cuidado com as imagens de baixa definição, e também com as de tamanho muito grande, que ao serem reduzidas podem perder detalhes. 
+\2 Desenhos vetoriais funcionam bem no \LaTeX, e existe um pacote bem complexo e difícil de usar chamado \textbf{tikz} que permite desenhar com comandos. 
 \2 Usando o pacote \textbf{ulem} e o \textbf{hacksxexeo} é possível cortar um texto! \profsug{\sout{Por exemplo, cortei esse aqui.}}
 \end{outline}
+
+
+
+
 \section{Ajuda!}
 O que você gostaria de ver nesse documento? 
 \section{Agradecimento}
