@@ -8,6 +8,7 @@
 \usepackage[natbib]{biblatex}
 \usepackage{outlines}
 \usepackage{booktabs}
+%\usepackage[multiple]{footmisc}
 \usepackage{hyperref}
 
 
@@ -131,6 +132,8 @@ Sua dissertação deve ter 5 ou 7 capítulos, nas seguintes opções, com no má
         \item Conclusão
     \end{enumerate}
 
+
+
 Os \textbf{tempos de verbo} a serem usados na dissertação são:
 \begin{itemize}
     \item a introdução é no presente, como em ``Esse trabalho explora'';
@@ -140,9 +143,64 @@ Os \textbf{tempos de verbo} a serem usados na dissertação são:
     \item a conclusão é no passado, como em ``Esse trabalho explorou'';
 \end{itemize}
 
+As citações na forma numérica estão \textbf{terminantemente proibidas}. Não vou nem ler o texto. As citações devem ser na forma ``(XEXÉO, 2021)'', como executado pelo estilo bibliográfico \textbf{coppe-plain}.
+
+A dissertação não pode ser escrita na primeira pessoa, nem do singular, nem do plural. O ``nós'' em português, considerado por alguns o plural de modéstia, acabou se tornando o plural majestático. Além disso, a dissertação é apenas suas. Como nenhum de nós é rei ou rainha, não usar. O ``eu'' cabe em algumas situações, mas são muito raras. 
+
+Falamos ``deste trabalho'', com atenção ao uso de ``este'' para indicar o documento propriamente dito, sendo o caso principal do uso do ``este''. Nos outros casos, como a referência a algo que estamos falando, mesmo que na escrita comum seja correto usar ``este'', nós evitamos.
+
  \textbf{Toda figura e tabela tem que estar citada no texto}, e só pode aparecer a partir da página onde a citação é feita. Isso significa que ela pode aparecer antes da citação se for na mesma página (o que é a opção \verb!t! do ambiente \verb!figure!). O \LaTeX\ faz isso automaticamente, se for usado corretamente.
   
 Legendas de tabela são sobre a tabela, de figuras são sob a figura. Você tem que fazer isso na mão, não é automático.
+
+Priorize a forma direta das sentenças: sujeito, verbo, predicado. Se você colocou aspas separando uma oração no meio da sentença, é possível que ela fique mais bem\footnote{Intencionalmente escrevemos essa frase para lembrar que com de verbo no particípio é obrigatório o uso de ``mais bem'' e não o da palavra ``melhor''. Português não é moleza!} colocada em outra posição da sentença.
+
+\subsubsection{A Introdução}
+
+A introdução deve conter \textbf{pelo menos} quatro partes.
+
+\begin{outline}
+\1 A \textbf{introdução} propriamente dita, incluindo uma pequena descrição do que foi feito e dos resultados, e uma pequena introdução a metodologia, que será melhor descrita  mais tarde no texto. Deve conter referências e pode indicar partes do texto.
+\1 A \textbf{motivação}, em seção específica.
+\2 Sempre é interessante que a motivação mostre o \textbf{valor} do resultado da dissertação, seja um valor econômico, seja outro. 
+\1 O \textbf{objetivo}, em seção específica, que trato detalhadamente a seguir.
+\1 A descrição do documento, com a indicação do conteúdo de cada capítulo\footnote{Eu raramente leio essa parte, mas é tradição tê-la.}.
+\end{outline}
+
+Se o candidato teve  publicações relacionadas com o tema da dissertação, deve listá-las também em uma seção adicional. 
+
+Uma regra importante: a dissertação não é um romance, não devemos manter segredos. Pelo contrário, é importante dar os \textit{spoilers} todos, para o leitor entender o que vai ler. Além disso, a conclusão da dissertação deve confirmar que tudo que foi prometido foi alcançado.
+
+\subsection{O objetivo }
+
+Três abordagens são possíveis para o objetivo. 
+
+O primeiro é ele ser uma hipótese a ser provada. 
+Nesse caso, novamente se divide em dois tipos, ou a prova é formal, por meio de teoremos, ou deve ser feito um experimento com um hipótese estatística. 
+No segundo tipo, é escolhida uma hipótese e feito um teste de hipótese, com a hipótese nula, $H_0$, a que é posta a prova, e a hipótese alternativa, $H_1$.  
+No experimento, então, devem ser estabelecidos e aplicados critérios de teste, onde entram conceitos como erro de tipo I, erro de tipo II, p-valor\footnote{Ainda procurando uma referência boa}. Essa é a abordagem mais formal, porém obriga o aluno a ter um experimento definido. É boa, por exemplo, para provar que um algoritmo é melhor que outro. 
+
+O segundo é trabalhar com questões de pesquisa. Esse modelo é 
+bastante usado no PESC, principalmente na nossa linha e na linha de Engenharia de Software, e meu preferido atualmente. Para trabalhar com perguntas, é interessante conhecer o método Goal, Question and Metrics\citep{Basili94,gqmm}.
+Isso permite uma formalidade no uso das perguntas, que devem ser construídas na forma de um passo a passo, como na estrutura abaixo, criada de forma \textit{ad-hoc} por mim a partir da proposta de tese de doutorado do Luis Felipe Costa:
+\begin{enumerate}
+    \item Existe um diferença entre a participação de homens e mulheres nas áreas de STEM?
+    \item Quais são as dificuldades que criam essas diferenças e as mulheres tem que vencer?
+    \item Que ações estão sendo tomadas para evitar essas dificuldades ou auxiliar as mulheres a vence-las?
+    \item Que teorias, métodos e ferramentas são usadas nessas ações?
+    \item O uso de ambientes EAD com jornadas heroicas pode auxiliar mulheres a vencerem esses desafios?
+\end{enumerate}
+
+Nessa estrutura, as primeiras perguntas são feitas para confirmar a existência do problema, as do meio para mostrar qual o estado da arte e a última, mas poderiam ser mais, para mostrar a sua proposta.
+
+O terceiro é ter objetivo e sub-objetivos. É o menos formal, mas também é possível. Eu prefiro que os objetivos sejam transformados em perguntas, mas podemos combinar caso a caso.
+
+Deve ficar claro que os objetivos, ou perguntas, são científicos e não um projeto. Muitos alunos têm um bom projeto, mas não tem uma dissertação de mestrado.
+
+É importante \textbf{nunca usar o termo hipótese se não vai ser feito o teste de hipótese}, porque a banca certamente vai questionar fortemente.
+
+Outros métodos de declara o objetivo da tese são possíveis, e podemos discutir pessoalmente.
+
 
 \subsection{Dicas para escrever}
     
@@ -153,13 +211,35 @@ O Método da Pirâmide\citep{minto1,minto2} segue esse princípio de forma \text
 
 Lembrar que o texto tem que ser encadeado. Não dizer ``João disse X. Maria disse Y'', dizer ``João disse X, porém Maria discordou e disse Y''.
 
-Não se pode afirmar nada sem se apoiar em uma informação factual ou que não seja uma conclusão. Você não pode dizer ``muita gente usa relógio'', tem que dizer ``\verb!\citet{joaozinho2020}! mostra que 60\% da população brasileira usa relógio!''.
+Não seja vago. Não se pode afirmar nada sem se apoiar em uma informação factual ou que não seja uma conclusão. Você não pode dizer ``muita gente usa relógio'', tem que dizer ``\verb!\citet{joaozinho2020}! mostra que 60\% da população brasileira usa relógio!''.
+
+Se usar um grupo específico, deixe claro, como em: ``Na preparação deste trabalho observamos as pessoas que entravam no prédio da UFRJ pelo portão principal do bloco A, entre 12:00 e 14:00 do dia 23/4/2021, e 60\% dos 231 observados usava relógio de forma visível''\footnote{O trabalho científico deve ser exato mesmo quando fazemos observações informais.}.
 
 Você não pode achar, tem que concluir racionalmente ou declarar uma premissa explícita, como em ``Esse trabalho parte da premissa que quem tem relógio quer saber as horas''. A premissa pode ser questionada pelo leitor, mas a construção do trabalho é feita sobre a premissa. Já vi bancas onde o membro falou ``discordo da sua premissa, mas sei que seu orientador segue essa linha e vou avaliar considerando ela válida''.
 
+Cuidado ao usar a expressão ``o autor''. Que autor, o do artigo que você discute, ou você? Além disso, você tem certeza que é um autor, não seriam vários, ou uma autora? Por isso é melhor usar a citação, com o comando \verb!\citeauthor{}! ou semelhante\footnote{Devido aos problemas que estamos tendo com o estilo CoppeTeX e o bib\LaTeX, pode ser necessário usar outro comando}. Se forem vários autores, é necessário usar o plural, e o gênero certo. Então é melhor ainda comentar o trabalho e não a pessoa, como em ``esse artigo apresenta a ideia que...''.
+
+Após escrever um parágrafo, leia-o para cortar texto inútil. Menos é mais quando escrevemos em Computação. Não devemos usar adjetivos e advérbios desnecessários, ou que são vagos. Não dizemos ``O grande escritor Jorge Amado'', mas só ``Jorge Amado''. Se necessário, podemos qualificar, como em ``Jorge Amado, escritor bahiano'', principalmente para pessoas menos conhecidas.
+
+ Não faça promessas que não são indicadas onde elas são cumpridas. Ou seja, não escreva ``será apresentado'', mas sim ``o capítulo 5 apresenta''.
+
+Palavras em outras línguas devem ser escritas em itálico.
+
+
+\subsection{Documentos na web com informações interessantes}
+
+\begin{outline}
+\1 O site \href{http://www.contornospesquisa.org/2012/08/como-referenciar-figuras-imagens-e.html}{Contornos - Educação e Pesquisa}\footnote{\url{http://www.contornospesquisa.org/2012/08/como-referenciar-figuras-imagens-e.html}} explica como referenciar figuras;
+
+\1 O documento \href{https://i0.statig.com.br/educacao/trabalhosacademicos/Recomendacoes_elaboracao_monografia.pdf}{Recomendações para elaboração da monografia do trabalho de graduação (TG)}\footnote{\url{https://i0.statig.com.br/educacao/trabalhosacademicos/Recomendacoes_elaboracao_monografia.pdf}} tem algumas recomendações interessantes que servem para a dissertação.
+\1 No site \textbf{pós-graduando}
+\2 \href{https://posgraduando.com/dez-erros-comuns-na-redacao-cientifica/}{Dez erros comuns na redação científica}\footnote{https://posgraduando.com/dez-erros-comuns-na-redacao-cientifica/}\textsuperscript{,\,}\footnote{Neste documento discordo da regra 5 em geral, mas principalmente no exemplo dado. É de uso corrente dizer que Tabelas apresentam informações.}. 
+\2 \href{https://posgraduando.com/dicas-para-melhorar-a-redacao-cientifica/}{Dicas para melhorar a redação científica}\footnote{\url{https://posgraduando.com/dicas-para-melhorar-a-redacao-cientifica/}}
+\end{outline}
+
 \subsection{Cuidados ao escrever}
 
-O texto deve ser exclusivemente científico, porém devemos:
+O texto deve ser exclusivamente científico, porém devemos:
 \begin{itemize}
     \item ter o cuidado de gerar um texto inclusivo em gênero. Em inglês usar a terceira pessoa do plural evita determinar o gênero. Já em português temos que apelar para construções com ``ele/ela'', voz passiva ou outra;
     \item mesmo tecnicamente, ter cuidado quando falar de religiões, principalmente de forma específica. Um leitor ou um membro da banca mais religioso pode se ofender com comentários ou mesmo com fatos;
@@ -235,6 +315,8 @@ escrito – Apresentação
 \item IBGE. Normas de apresentação tabular. 3. ed. Rio de Janeiro, 1993
 \end{itemize}
 
+O registro da Coppe verifica apenas as partes não-textuais, e o faz detalhadamente, medindo as distâncias com regras. Internamente você pode ser mais relaxado. 
+
 Todas as normas estão disponíveis no diretório Comuns no Google Drive.
     
 \end{itemize}
@@ -258,7 +340,7 @@ Os seguintes pacotes são recomendados, para ser usados quando necessários:
         
 \begin{itemize}
     \item \verb!\usepackage{graphicx}!, melhor que o graphics;
-    \item \verb!\usepackage{hyperref}!, que \textbf{obrigatoriamente deve ser o último} chamado, para criar links e tratar urls;
+    \item \verb!\usepackage{hyperref}!, que \textbf{obrigatoriamente deve ser o último} chamado, para criar links internos, trata urls, além disso ele cria \textit{bookmarks} e facilita muito a vida do leitor. Ele tem um problema: é incompatível com vários outros pacotes. Se algo não funciona como deveria, tente tirar ele e veja se funciona.
     \item \verb!\usepackage{booktabs}! que fornece linhas mais elegantes para as tabelas (\verb!\toprule!,\verb!\midrule!,\verb!\bottomrule!), as figuras \ref{tab:tab2} e \ref{tab:tab1} mostram a diferença.
     \item se necessário, a família dos pacotes de matemática da AMS, \verb!\usepackage{amsmath}! e
     \verb!\usepackage{amsfonts}!, \verb!\usepackage{amssymb}!, e \verb!\usepackage{amsthm}!.
@@ -294,7 +376,25 @@ Os seguintes pacotes são recomendados, para ser usados quando necessários:
     \label{tab:tab1}
 \end{table}
 
+\subsection{Dicas de \LaTeX}
 
+\begin{outline}
+\1 Dicas de organização do documento \LaTeX:
+\2 Escreva cada frase do parágrafo em uma linha do arquivo, isso facilitará encontrar os erros.
+\2 Não quebre muito o seu arquivo se não for necessário. Capítulos pequenos não precisam ter várias partes.
+\2 Numere os nomes dos arquivos de capítulos e seções de forma que fiquem na sequência certa no diretório do Overleaf, como em: 00Introducao.tex, 01Motivacao.tex, 02OProblema.tex.
+\1 Dicas de \LaTeX
+\2 Temos um grupo de Whatsapp para dúvidas de \LaTeX\footnote{\url{https://chat.whatsapp.com/Kad1ZgFQh1RE8e9PAkcBQA}}, por favor façam essas perguntas por lá, para favorecer a todos. Entrem no grupo!
+\2 Não compliquem o uso do \LaTeX, não se percam com detalhes, peçam ajuda. 
+\2 As figuras e tabelas, e todos os flutuantes, do \LaTeX flutuam mesmo, \textbf{não se preocupe} até o momento final da impressão, onde podemos tentar resolver. 
+\2 Se quiser proibir que figuras e tabelas mudem de seção use o pacote \verb!\usepackage[section]{placeins}!, também aconselho a usar sempre \verb!\begin{figure}[hbt]!, que tenta colocar no local, no fim da página ou no topo. 
+\3 Não gosto da opção \verb!H! do pacote \textbf{float}, porque pouco resolve o problema e às vezes gera outros. Só recomendo usar na edição final para entregar, se quiser resolver algum problema mais grave. Sempre evite usar o \verb!H!.
+\2 Aspas não são feitas com \verb!"! mas sim com \verb!``! no início e \verb!''! no final.
+\2 Controle o tamanho das imagens com as opções do comando \textbf{includegraphics}, como em: \verb!\includegraphics[width=0.5\linewidth]{arquivo}!, \verb!\includegraphics[scale=0.5]{arquivo}!, ou outros comandos do pacote \textbf{graphicx}.
+\2 Cuidado com as imagens de baixa definição, e também com as de tamanho muito grande, que ao serem reduzidas podem perder detalhes. 
+\2 Desenhos vetoriais funcionam bem no \LaTeX, e existe um pacote bem complexo e difícil de usar chamado \textbf{tikz} que permite desenhar com comandos. 
+\2 Usando o pacote \textbf{ulem} e o \textbf{hacksxexeo} é possível cortar um texto! \profsug{\sout{Por exemplo, cortei esse aqui.}}
+\end{outline}
 
 
 
@@ -336,29 +436,8 @@ Nesse documento, por exemplo, a url que aponta o documento sobre como referencia
     
 \end{itemize}
 
-\section{Dicas Gerais}
-\begin{outline}
-\1 Dicas de organização do documento \LaTeX:
-\2 Escreva cada frase do parágrafo em uma linha do arquivo, isso facilitará encontrar os erros.
-\2 Não quebre muito o seu arquivo se não for necessário. Capítulos pequenos não precisam ter várias partes.
-\2 Numere os nomes dos arquivos de capítulos e seções de forma que fiquem na sequência certa no diretório do Overleaf, como em: 00Introducao.tex, 01Motivacao.tex, 02OProblema.tex.
-\1 Dicas de escrita:
-\2 Não faça promessas que não são indicadas onde elas são cumpridas. Ou seja, não escreva ``será apresentado'', mas sim ``o capítulo 5 apresenta''.
-\2 O site \url{http://www.contornospesquisa.org/2012/08/como-referenciar-figuras-imagens-e.html} explica como referenciar figuras;
-\2 O documento \url{https://i0.statig.com.br/educacao/trabalhosacademicos/Recomendacoes_elaboracao_monografia.pdf} tem algumas recomendações interessantes, e
-\2 recomendo que todas as palavras em outra língua estejam em itálico.
-\1 Dicas de \LaTeX
-\2 Temos um grupo de Whatsapp para dúvidas de \LaTeX\footnote{\url{https://chat.whatsapp.com/Kad1ZgFQh1RE8e9PAkcBQA}}, por favor façam essas perguntas por lá, para favorecer a todos. Entrem no grupo!
-\2 Não compliquem o uso do \LaTeX, não se percam com detalhes, peçam ajuda. 
-\2 As figuras e tabelas, e todos os flutuantes, do \LaTeX flutuam mesmo, \textbf{não se preocupe} até o momento final da impressão, onde podemos tentar resolver. 
-\2 Se quiser proibir que figuras e tabelas mudem de seção use o pacote \verb!\usepackage[section]{placeins}!, também aconselho a usar sempre \verb!\begin{figure}[hbt]!, que tenta colocar no local, no fim da página ou no topo. 
-\3 Não gosto da opção \verb!H! do pacote \textbf{float}, porque pouco resolve o problema e às vezes gera outros. Só recomendo usar na edição final para entregar, se quiser resolver algum problema mais grave. Sempre evite usar o \verb!H!.
-\2 Aspas não são feitas com \verb!"! mas sim com \verb!``! no início e \verb!''! no final.
-\2 Controle o tamanho das imagens com as opções do comando \textbf{includegraphics}, como em: \verb!\includegraphics[width=0.5\linewidth]{arquivo}!, \verb!\includegraphics[scale=0.5]{arquivo}!, ou outros comandos do pacote \textbf{graphicx}.
-\2 Cuidado com as imagens de baixa definição, e também com as de tamanho muito grande, que ao serem reduzidas podem perder detalhes. 
-\2 Desenhos vetoriais funcionam bem no \LaTeX, e existe um pacote bem complexo e difícil de usar chamado \textbf{tikz} que permite desenhar com comandos. 
-\2 Usando o pacote \textbf{ulem} e o \textbf{hacksxexeo} é possível cortar um texto! \profsug{\sout{Por exemplo, cortei esse aqui.}}
-\end{outline}
+
+
 
 
 
