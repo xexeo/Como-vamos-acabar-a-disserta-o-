@@ -3,9 +3,8 @@
 \usepackage{csquotes}
 \usepackage[brazilian]{babel}
 \usepackage[show]{ed}
-\usepackage{hacksxexeo}
+\usepackage[biblatex,rascunhos,anonimizar,assuntos,sugestoes,comentarios]{hacksxexeo} 
 \usepackage[normalem]{ulem}
-\usepackage[natbib]{biblatex}
 \usepackage{outlines}
 \usepackage{booktabs}
 %\usepackage[multiple]{footmisc}
@@ -75,7 +74,7 @@ De forma a possibilitar a nossa colaboração, a prática de trabalho será da s
     \item os projetos que estiverem no topo da minha lista terão mais colaboração de minha parte;
     \item eu comentarei usando os pacotes \textbf{ed} e \textbf{hacksxexeo}, e corrigirei o que for simples\ednote{O ed funciona assim}\edissue{Com notas e issues};
     \item mantenham o número de \textbf{erros em zero} e o de warnings baixo. Eles aparecem em vermelho (erro) e amarelo (warning). Eu posso ajudar a corrigir quando for estranho para vocês.
-    \item eu darei suporte de \LaTeX e bib\LaTeX, e espero que todos se ajudem;
+    \item eu darei suporte de \LaTeX e bib\TeX, e espero que todos se ajudem;
     \item problemas genéricos de \LaTeX devem ser colocados no grupo de WhatsApp ``\LaTeX ers no PESC''\footnote{\url{https://chat.whatsapp.com/Kad1ZgFQh1RE8e9PAkcBQA}}, para que a solução ajude a todos;
     \item Whatsapp é porta aberta, entrem em contato se quiserem;
     \item perguntas cuja resposta pode favorecer a todos os orientados devem ser feitas no grupo de Orientados do WhatApp;
@@ -144,7 +143,7 @@ Os \textbf{tempos de verbo} a serem usados na dissertação são:
     \item a conclusão é no passado, como em ``Esse trabalho explorou'';
 \end{itemize}
 
-As citações na forma numérica estão \textbf{terminantemente proibidas}. Não vou nem ler o texto. As citações devem ser na forma ``(XEXÉO, 2021)'', como executado pelo estilo bibliográfico \textbf{coppe-plain}.
+As citações na forma numérica estão \textbf{terminantemente proibidas}. Não vou nem ler o texto. As citações devem ser na forma ``(XEXÉO, 2021)'', como executado pelo estilo bibliográfico imposto pelo \textbf{hacksxexeo}.
 
 A dissertação não pode ser escrita na primeira pessoa, nem do singular, nem do plural. O ``nós'' em português, considerado por alguns o plural de modéstia, acabou se tornando o plural majestático. Além disso, a dissertação é apenas suas. Como nenhum de nós é rei ou rainha, não usar. O ``eu'' cabe em algumas situações, mas são muito raras. 
 
@@ -328,14 +327,41 @@ Todas as normas estão disponíveis no diretório Comuns no Google Drive.
 
 \section{O \LaTeX}
 
-\subsection{Pacotes \LaTeX\  obrigatórios e recomendados}
+\subsection{Pacotes \LaTeX\  obrigatórios}
 
-Os seguintes pacotes são obrigatórios:
+É obrigatório usar o pacote \textbf{hacksxexeo} com a configuração:
 
-\begin{itemize}
-    \item \textbf{ed} com a configuração \verb!\usepackage[show]{ed}!, que é obrigatório para o hacksxexeo.
-        \item \textbf{hacksxexeo} com a configuração \verb!\usepackage{hacksxexeo}!, disponível em \url{https://github.com/xexeo/hacksxexeo}
-\end{itemize}
+\verb!\usepackage[\usepackage[rascunhos,assuntos,%!
+\verb!sugestoes,comentarios]{hacksxexeo}%!
+
+
+Ele está  disponível em \url{https://github.com/xexeo/hacksxexeo}
+
+Para manter a compatibilidade com o estilo \textbf{CoppeTeX}, nós usaremos o bib\TeX com o pacote natbib, \textbf{porém sem usar a opção numbers na chamada do estilo da Coppe, coisa que todos copiam do exemplo e não percebem.}
+
+
+\subsection{Estilo hacksxexeo}
+
+O seguinte código deve ser usado no seu texto para comentários coloridos, \prof[possivelmente marcando o texto]{Meu comentário} ou não marcando\cand{seu comentário}, com os comandos:
+
+\verb!\cand[texto a marcar]comentário}! e 
+
+\verb!\cand[texto a marcar]{comentário}!.
+
+Também podem ser colocados textos com cor para ressaltar como sugestão, ou outra coisa (comentar com os comandos anteriores) com os comandos \verb!\candsug{texto}! e
+\verb!\candsug[comentário]{text}!. Note que a ordem dos parâmetros muda.
+
+Deve funcionar \profsug{como estou mostrando nesse parágrafo, aqui com a minha sugestão} e \candsug{aqui como ficaria a sua}.
+
+Esse pacote será aprimorado e vou avisar quando precisar atualizá-lo, por exemplo com \textit{environments} coloridos.
+
+A motivação desse pacote é que nenhum pacote para edição ou colaboração atende minhas vontades arbitrárias.
+
+O arquivo \href{https://github.com/xexeo/hacksxexeo/blob/main/dist/hacksxexeo.pdf}{hacksxexeo.pdf} explica todo o funcionamento do estilo \textbf{hacksxexeo}.
+
+
+\subsection{Pacotes \LaTeX recomendados}
+    
     
 Os seguintes pacotes são recomendados, para ser usados quando necessários:    
         
@@ -394,25 +420,11 @@ Os seguintes pacotes são recomendados, para ser usados quando necessários:
 \2 Controle o tamanho das imagens com as opções do comando \textbf{includegraphics}, como em: \verb!\includegraphics[width=0.5\linewidth]{arquivo}!, \verb!\includegraphics[scale=0.5]{arquivo}!, ou outros comandos do pacote \textbf{graphicx}.
 \2 Cuidado com as imagens de baixa definição, e também com as de tamanho muito grande, que ao serem reduzidas podem perder detalhes. 
 \2 Desenhos vetoriais funcionam bem no \LaTeX, e existe um pacote bem complexo e difícil de usar chamado \textbf{tikz} que permite desenhar com comandos. 
-\2 Usando o pacote \textbf{ulem} e o \textbf{hacksxexeo} é possível cortar um texto! \profsug{\sout{Por exemplo, cortei esse aqui.}}
+\2 Usando o pacote \textbf{hacksxexeo} é possível cortar um texto! \candrem{Por exemplo, cortei esse aqui.}
 \end{outline}
 
 
 
-\subsection{Estilo hacksxexeo}
-
-O estilo \textbf{hacksxexeo} é obrigatório e usado com o comando \verb!\usepackage{hacksxexeo}!, e está disponível em \url{https://github.com/xexeo/hacksxexeo}. Ele exige os pacotes \textbf{ed} e \textbf{xcolor}, que devem ser carregados antes com as suas opções desejadas, já que no momento ele não altera as opções.
-
-O seguinte código deve ser usado no seu texto para comentários coloridos \prof{Meu comentário}\cand{seu comentário}, com os comandos \verb!\prof{comentário}! e \verb!\cand{comentário}!:
-
-Também podem ser colocados textos com cor para ressaltar como sugestão, ou outra coisa (comentar com os comandos anteriores) com os comandos \verb!\profsug{texto}! e
-\verb!\candsug{text}!.
-
-Deve funcionar \profsug{como estou mostrando nesse parágrafo, aqui com a minha sugestão} e \candsug{aqui como ficaria a sua}.
-
-Esse pacote será aprimorado e vou avisar quando precisar atualizá-lo, por exemplo com \textit{environments} coloridos.
-
-A motivação desse pacote é que nenhum pacote para edição ou colaboração atende minhas vontades arbitrárias.
 
 \subsection{Errors e Warnings}
 
@@ -433,14 +445,20 @@ Nesse documento, por exemplo, a url que aponta o documento sobre como referencia
      São obrigatórios as seguintes configurações nos projetos Overleaf:
     \begin{itemize}
         \item \sout{usar o processador \textbf{Lua\LaTeX}, que é mais poderoso, configuração no Menu do projeto, e dispensa configurar para usar utf-8, que é natural dele.}\footnote{Esta configuração está dando problema de \textit{timeout} no Overleaf. O Lua\LaTeX\ é realmente mais lento.  }
-        \item \sout{usar o \textbf{bibLaTeX} e não o bibTeX}\footnote{ Esta configuração está dando problema, que tentaremos corrigir}.
-    
 \end{itemize}
 
+\section{A Bibliografia}
 
+O pacote \textbf{hacksxexeo} permite o uso do bib\LaTeX, porém é necessário alterar a a configuração do pacote Coppe\TeX. Para isso é necessário comentar a seguinte linha do arquivo \textbf{coppe-plai} (já comentada), possivelmente a linha 56 do arquivo:
 
+\begin{verbatim}
+    %\RequirePackage[sort&compress]{natbib}
+\end{verbatim}
 
-
+Para imprimir a bibliografia, use o comando:
+\begin{verbatim}
+    \printbibliography
+\end{verbatim}
 
 
 \section{Ajuda!}
