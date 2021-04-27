@@ -7,15 +7,16 @@
 \usepackage[normalem]{ulem}
 \usepackage{outlines}
 \usepackage{booktabs}
+\usepackage{datetime}
 %\usepackage[multiple]{footmisc}
 \usepackage{hyperref}
 
 
 \addbibresource{bib.bib}
 
-\title{Como vamos acabar a dissertação?}
+\title{Como vamos acabar a dissertação? v1.0}
 \author{Geraldo Xexéo}
-\date{April 2021 - Versão 0.8a}
+\date{\today\ - \ \currenttime}
 
 \begin{document}
 
@@ -26,6 +27,7 @@
 Esse documento apresenta as regras para os alunos de 2017/1 que vão tentar acabar sua dissertação de mestrado, aproveitando o perdão da pandemia.
 
 Não esqueça de ler o \textbf{Guia dos Orientados}\footnote{\url{http://www.xexeo.net/ensino/guia-dos-orientados/}}. Esse documento é uma extensão para esse momento de finalizar a dissertação, onde vamos usar algumas regras mais fortes.
+
 
 \section{Nosso trabalho conjunto}
 
@@ -39,7 +41,7 @@ O andamento será da seguinte forma:
     \item espera-se que o acordo seja cumprido, porém entende-se que alguns podem ser mais longos que 1 semana, e deverá ser cumprido parcialmente.
 \end{itemize}
 
-A avaliação  será feita em função de vocês cumprirem ou não o ritmo de trabalho.
+A avaliação  será feita em função de vocês \textbf{cumprirem ou não o ritmo de trabalho}.
 
 \subsection{Estrutura de troca de informações}
 
@@ -72,8 +74,8 @@ De forma a possibilitar a nossa colaboração, a prática de trabalho será da s
     \item ao acabar uma sessão de trabalho no Overleaf \textbf{sempre} de commit-\textbf{push} no projeto, isso garantirá que eu não destruo seu trabalho (outros commits podem ser dados durante a sessão);
     \item sempre que acabar uma seção ou subseção de porte, de commit-push com comentário pertinente;
     \item os projetos que estiverem no topo da minha lista terão mais colaboração de minha parte;
-    \item eu comentarei usando os pacotes \textbf{ed} e \textbf{hacksxexeo}, e corrigirei o que for simples\ednote{O ed funciona assim}\edissue{Com notas e issues};
-    \item mantenham o número de \textbf{erros em zero} e o de warnings baixo. Eles aparecem em vermelho (erro) e amarelo (warning). Eu posso ajudar a corrigir quando for estranho para vocês.
+    \item eu comentarei usando o pacote \textbf{hacksxexeo}, e corrigirei o que for simples\prof{O ed funciona assim}, vocês também podem comentar;
+    \item mantenham o número de \textbf{erros em zero} e o de warnings baixo. Eles aparecem em vermelho (erro) e amarelo (warning). Eu posso ajudar a corrigir quando for estranho para vocês. Se o bibtex gerar erros, vocês provavelmente tem campos faltando na sua base.
     \item eu darei suporte de \LaTeX e bib\TeX, e espero que todos se ajudem;
     \item problemas genéricos de \LaTeX devem ser colocados no grupo de WhatsApp ``\LaTeX ers no PESC''\footnote{\url{https://chat.whatsapp.com/Kad1ZgFQh1RE8e9PAkcBQA}}, para que a solução ajude a todos;
     \item Whatsapp é porta aberta, entrem em contato se quiserem;
@@ -143,7 +145,7 @@ Os \textbf{tempos de verbo} a serem usados na dissertação são:
     \item a conclusão é no passado, como em ``Esse trabalho explorou'';
 \end{itemize}
 
-As citações na forma numérica estão \textbf{terminantemente proibidas}. Não vou nem ler o texto. As citações devem ser na forma ``(XEXÉO, 2021)'', como executado pelo estilo bibliográfico imposto pelo \textbf{hacksxexeo}.
+As citações na forma numérica estão \textbf{terminantemente proibidas}. Não vou nem ler o texto. As citações devem ser na forma ``(XEXÉO, 2021)'', para isso basta eliminar a opção \textbf{numbers} que vem no exemplo.
 
 A dissertação não pode ser escrita na primeira pessoa, nem do singular, nem do plural. O ``nós'' em português, considerado por alguns o plural de modéstia, acabou se tornando o plural majestático. Além disso, a dissertação é apenas suas. Como nenhum de nós é rei ou rainha, não usar. O ``eu'' cabe em algumas situações, mas são muito raras. 
 
@@ -346,7 +348,7 @@ O seguinte código deve ser usado no seu texto para comentários coloridos, \pro
 
 \verb!\cand[texto a marcar]comentário}! e 
 
-\verb!\cand[texto a marcar]{comentário}!.
+\verb!\candr[texto a marcar]{comentário}{rótulo}!.
 
 Também podem ser colocados textos com cor para ressaltar como sugestão, ou outra coisa (comentar com os comandos anteriores) com os comandos \verb!\candsug{texto}! e
 \verb!\candsug[comentário]{text}!. Note que a ordem dos parâmetros muda.
@@ -413,13 +415,15 @@ Os seguintes pacotes são recomendados, para ser usados quando necessários:
 \1 Dicas de \LaTeX
 \2 Temos um grupo de Whatsapp para dúvidas de \LaTeX\footnote{\url{https://chat.whatsapp.com/Kad1ZgFQh1RE8e9PAkcBQA}}, por favor façam essas perguntas por lá, para favorecer a todos. Entrem no grupo!
 \2 Não compliquem o uso do \LaTeX, não se percam com detalhes, peçam ajuda. 
-\2 As figuras e tabelas, e todos os flutuantes, do \LaTeX flutuam mesmo, \textbf{não se preocupe} até o momento final da impressão, onde podemos tentar resolver. 
+\2 As figuras e tabelas, e todos os flutuantes, do \LaTeX\  flutuam mesmo, \textbf{não se preocupe} até o momento final da impressão, onde podemos tentar resolver. 
 \2 Se quiser proibir que figuras e tabelas mudem de seção use o pacote \verb!\usepackage[section]{placeins}!, também aconselho a usar sempre \verb!\begin{figure}[hbt]!, que tenta colocar no local, no fim da página ou no topo. 
 \3 Não gosto da opção \verb!H! do pacote \textbf{float}, porque pouco resolve o problema e às vezes gera outros. Só recomendo usar na edição final para entregar, se quiser resolver algum problema mais grave. Sempre evite usar o \verb!H!.
 \2 Aspas não são feitas com \verb!"! mas sim com \verb!``! no início e \verb!''! no final.
+\3 Não consigo gerar estes caracteres! São o acento grave e o apóstrofe reto, repetidos duas vezes. No teclado ABNT estão do lado esquerdo do 1 e do lado direito do P (com shift). 
 \2 Controle o tamanho das imagens com as opções do comando \textbf{includegraphics}, como em: \verb!\includegraphics[width=0.5\linewidth]{arquivo}!, \verb!\includegraphics[scale=0.5]{arquivo}!, ou outros comandos do pacote \textbf{graphicx}.
 \2 Cuidado com as imagens de baixa definição, e também com as de tamanho muito grande, que ao serem reduzidas podem perder detalhes. 
 \2 Desenhos vetoriais funcionam bem no \LaTeX, e existe um pacote bem complexo e difícil de usar chamado \textbf{tikz} que permite desenhar com comandos. 
+\3 Imagens não vetoriais podem perder detalhes, verifique o pdf e a impressão.
 \2 Usando o pacote \textbf{hacksxexeo} é possível cortar um texto! \candrem{Por exemplo, cortei esse aqui.}
 \end{outline}
 
@@ -440,12 +444,6 @@ Uma inspeção visual nas bordas e na diagramação geral do documento rapidamen
 
 Nesse documento, por exemplo, a url que aponta o documento sobre como referenciar figuras deu um erro de $130.28$ pontos, aproximadamente $4.59$ cm, o que provocou que ela saísse não só das bordas da linha, mas também da borda do papel.
 
-\subsection{Configuração do Overleaf}    
-    
-     São obrigatórios as seguintes configurações nos projetos Overleaf:
-    \begin{itemize}
-        \item \sout{usar o processador \textbf{Lua\LaTeX}, que é mais poderoso, configuração no Menu do projeto, e dispensa configurar para usar utf-8, que é natural dele.}\footnote{Esta configuração está dando problema de \textit{timeout} no Overleaf. O Lua\LaTeX\ é realmente mais lento.  }
-\end{itemize}
 
 \section{A Bibliografia}
 
