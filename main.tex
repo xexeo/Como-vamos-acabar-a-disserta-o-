@@ -10,7 +10,10 @@
 \usepackage{datetime}
 %\usepackage[multiple]{footmisc}
 \usepackage{hyperref}
-
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemiii}{$\diamond$}
+\renewcommand{\labelitemiv}{$\circle}
 
 \addbibresource{bib.bib}
 
@@ -114,7 +117,7 @@ Essa subseção define regras \textbf{obrigatórias} para a escrita da disserta�
 
 Sua dissertação deve ter 5 ou 7 capítulos, nas seguintes opções, com no máximo 80 páginas de texto.
 
-\begin{outline}
+\begin{itemize}
     \item com sete capítulos
     \begin{enumerate}
         \item Introdução
@@ -133,7 +136,7 @@ Sua dissertação deve ter 5 ou 7 capítulos, nas seguintes opções, com no má
         \item Experimentos
         \item Conclusão
     \end{enumerate}
-
+\end{itemize}
 
 
 Os \textbf{tempos de verbo} a serem usados na dissertação são:
@@ -203,6 +206,22 @@ Deve ficar claro que os objetivos, ou perguntas, são científicos e não um pro
 
 Outros métodos de declara o objetivo da tese são possíveis, e podemos discutir pessoalmente.
 
+\subsubsection{Achando estatísticas gerais}
+
+Muitas vezes na introdução ou na motivação precisamos de dados gerais. A busca pelo Google é uma solução ótima. Partir da Wikipedia também. Algumas instituições que podem ser usadas como referência, como listado a seguir.
+
+\begin{itemize}
+    \item ONU e suas ``subsidárias'' como UNESCO, WHO, etc.
+    \item Publicações de outros órgãos supra-governamentais, como a União Européia, OCDE, etc.
+    \item Informações do governo brasileiro, em sites dos ministérios, autarquias, fundações e no Portal da Transparência\footnote{\url{http://transparencia.gov.br/}}.
+    \item World Bank, International Monetary Fund, e similares.
+    \item Órgãos oficiais de estatística, como o IBGE.
+    \item Empresas de pesquisa reconhecidas, como o IBOPE, Datafolha, etc.
+    \item CIA World Factbook.
+    \item Gapminder (que aponta outras instituições).
+    \item Think Tanks não partidários, como a RAND Corporation.
+    \item Think Tanks partidários/sindicais, mas amplamente reconhecido, como DIEESE.
+\end{itemize}
 
 \subsection{Dicas para escrever}
     
@@ -226,6 +245,7 @@ Após escrever um parágrafo, leia-o para cortar texto inútil. Menos é mais qu
  Não faça promessas que não são indicadas onde elas são cumpridas. Ou seja, não escreva ``será apresentado'', mas sim ``o capítulo 5 apresenta''.
 
 Palavras em outras línguas devem ser escritas em itálico.
+
 
 
 \subsection{Documentos na web com informações interessantes}
@@ -329,8 +349,6 @@ O registro da Coppe verifica apenas as partes não-textuais, e o faz detalhadame
 
 Todas as normas estão disponíveis no diretório Comuns no Google Drive.
     
-\end{itemize}
-
 
 
 
@@ -428,11 +446,19 @@ Os seguintes pacotes são recomendados, para ser usados quando necessários:
 \3 Não gosto da opção \verb!H! do pacote \textbf{float}, porque pouco resolve o problema e às vezes gera outros. Só recomendo usar na edição final para entregar, se quiser resolver algum problema mais grave. Sempre evite usar o \verb!H!.
 \2 Aspas não são feitas com \verb!"! mas sim com \verb!``! no início e \verb!''! no final.
 \3 Não consigo gerar estes caracteres! São o acento grave e o apóstrofe reto, repetidos duas vezes. No teclado ABNT estão do lado esquerdo do 1 e do lado direito do P (com shift). 
-\2 Controle o tamanho das imagens com as opções do comando \textbf{includegraphics}, como em: \verb!\includegraphics[width=0.5\linewidth]{arquivo}!, \verb!\includegraphics[scale=0.5]{arquivo}!, ou outros comandos do pacote \textbf{graphicx}.
+\2 Controle o tamanho das imagens com as opções do comando \textbf{includegraphics}, como em:
+
+ \verb!\includegraphics[width=0.5\linewidth]{arquivo}!, 
+ 
+ \verb!\includegraphics[scale=0.5]{arquivo}!, 
+ 
+ ou outros comandos do pacote \textbf{graphicx}.
+
 \2 Cuidado com as imagens de baixa definição, e também com as de tamanho muito grande, que ao serem reduzidas podem perder detalhes. 
 \2 Desenhos vetoriais funcionam bem no \LaTeX, e existe um pacote bem complexo e difícil de usar chamado \textbf{tikz} que permite desenhar com comandos. 
 \3 Imagens não vetoriais podem perder detalhes, verifique o pdf e a impressão.
 \2 Usando o pacote \textbf{hacksxexeo} é possível cortar um texto! \candrem{Por exemplo, cortei esse aqui.}
+\1 Use um gerador de tabelas online para começar, como o \href{https://www.tablesgenerator.com/}{Tables Generator}\footnote{\url{https://www.tablesgenerator.com/}}
 \end{outline}
 
 
