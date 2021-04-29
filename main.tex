@@ -305,7 +305,7 @@ Também recomendamos usar o estilo \textbf{booktabs}, que fornece comandos \verb
     \end{tabular}
 \end{table}
 
-Apesar muitos textos usarem tabelas com todas as linhas verticais e horizontais, como na Figura \ref{tab:tab3}, pense em não usá-las, como na Figura \ref{tab:prof}. \citeauthor{ei} recomenda que devemos dar importância aos dados, não a decoração das tabelas.
+Apesar muitos textos usarem tabelas com todas as linhas verticais e horizontais, como na Tabela \ref{tab:tab3}, pense em não usá-las, como na Tabela \ref{tab:prof}. \citeauthor{ei} recomenda que devemos dar importância aos dados, não a decoração das tabelas.
 
 
 \begin{table}[htb]
@@ -382,8 +382,14 @@ O seguinte código deve ser usado no seu texto para comentários coloridos, \pro
 
 \verb!\candr[texto a marcar]{comentário}{rótulo}!.
 
-Também podem ser colocados textos com cor para ressaltar como sugestão, ou outra coisa (comentar com os comandos anteriores) com os comandos \verb!\candsug{texto}! e
-\verb!\candsug[comentário]{text}!. Note que a ordem dos parâmetros muda.
+Também podem ser colocados textos com cor para ressaltar como sugestão, ou outra coisa (comentar com os comandos anteriores) com os comandos
+
+\verb!\candsug{texto}! e
+
+\verb!\candsug[comentário]{text}!.
+
+Note que a ordem dos parâmetros muda, porque aqui a marcação é obrigatória, e o comentário não. Comandos similares permitem \profrem{remover}   e \proftroca{cambiar}{trocar}   textos.
+
 
 Deve funcionar \profsug{como estou mostrando nesse parágrafo, aqui com a minha sugestão} e \candsug{aqui como ficaria a sua}.
 
@@ -394,7 +400,7 @@ A motivação desse pacote é que nenhum pacote para edição ou colaboração a
 O arquivo \href{https://github.com/xexeo/hacksxexeo/blob/main/dist/hacksxexeo.pdf}{hacksxexeo.pdf} explica todo o funcionamento do estilo \textbf{hacksxexeo}.
 
 
-\subsection{Pacotes \LaTeX recomendados}
+\subsection{Pacotes \LaTeX\  recomendados}
     
     
 Os seguintes pacotes são recomendados, para ser usados quando necessários:    
@@ -402,40 +408,40 @@ Os seguintes pacotes são recomendados, para ser usados quando necessários:
 \begin{itemize}
     \item \verb!\usepackage{graphicx}!, melhor que o graphics;
     \item \verb!\usepackage{hyperref}!, que \textbf{obrigatoriamente deve ser o último} chamado, para criar links internos, trata urls, além disso ele cria \textit{bookmarks} e facilita muito a vida do leitor. Ele tem um problema: é incompatível com vários outros pacotes. Se algo não funciona como deveria, tente tirar ele e veja se funciona.
-    \item \verb!\usepackage{booktabs}! que fornece linhas mais elegantes para as tabelas (\verb!\toprule!,\verb!\midrule!,\verb!\bottomrule!), as figuras \ref{tab:tab3} e \ref{tab:prof} mostram a diferença.
+    \item \verb!\usepackage{booktabs}! que fornece linhas mais elegantes para as tabelas (\verb!\toprule!,\verb!\midrule!,\verb!\bottomrule!), as Tabelas \ref{tab:tab3} e \ref{tab:prof} mostram a diferença.
     \item se necessário, a família dos pacotes de matemática da AMS, \verb!\usepackage{amsmath}! e
     \verb!\usepackage{amsfonts}!, \verb!\usepackage{amssymb}!, e \verb!\usepackage{amsthm}!.
 \end{itemize}
 
-\begin{table}[htb]
-    \centering
-        \caption{Exemplo de uma tabela normal do \LaTeX .}
-    \begin{tabular}{cc}
-    \hline
-        1 & Exemplo de linhas normais   \\
-        \hline
-        2 & linha 1\\
-        3 & linha 2\\
-        \hline
-    \end{tabular}
-
-    \label{tab:tab2}
-\end{table}
-
-\begin{table}[htb]
-    \centering
-        \caption{Exemplo do uso do pacote \textbf{booktabs} }
-    \begin{tabular}{cc}
-    \toprule
-        1 & Exemplo de linhas mais elegantes   \\
-        \midrule
-        2 & linha 1\\
-        3 & linha 2\\
-        \bottomrule
-    \end{tabular}
-
-    \label{tab:tab1}
-\end{table}
+%\begin{table}[htb]
+%    \centering
+%        \caption{Exemplo de uma tabela normal do \LaTeX .}
+%    \begin{tabular}{cc}
+%    \hline
+%        1 & Exemplo de linhas normais   \\
+%        \hline
+%        2 & linha 1\\
+%        3 & linha 2\\
+%        \hline
+%    \end{tabular}
+%
+%    \label{tab:tab2}
+%\end{table}
+%
+%\begin{table}[htb]
+%    \centering
+%        \caption{Exemplo do uso do pacote \textbf{booktabs} }
+%    \begin{tabular}{cc}
+%    \toprule
+%        1 & Exemplo de linhas mais elegantes   \\
+%        \midrule
+%        2 & linha 1\\
+%        3 & linha 2\\
+%        \bottomrule
+%    \end{tabular}
+%
+%    \label{tab:tab1}
+%\end{table}
 
 \subsubsection{Pacotes não recomendados e alternativas}
 
@@ -471,7 +477,7 @@ Os seguintes pacotes são recomendados, para ser usados quando necessários:
 \2 Cuidado com as imagens de baixa definição, e também com as de tamanho muito grande, que ao serem reduzidas podem perder detalhes. 
 \2 Desenhos vetoriais funcionam bem no \LaTeX, e existe um pacote bem complexo e difícil de usar chamado \textbf{tikz} que permite desenhar com comandos. 
 \3 Imagens não vetoriais podem perder detalhes, verifique o pdf e a impressão.
-\2 Usando o pacote \textbf{hacksxexeo} é possível cortar um texto! \candrem{Por exemplo, cortei esse aqui.} O uso dos comandos desse pacote ajuda a saber quem fez o que.)
+%\2 Usando o pacote \textbf{hacksxexeo} é possível cortar um texto! \candrem{Por exemplo, cortei esse aqui.} O uso dos comandos desse pacote ajuda a saber quem fez o que.)
 \2 Use um gerador de tabelas online para começar a criá-las, como o \href{https://www.tablesgenerator.com/}{Tables Generator}\footnote{\url{https://www.tablesgenerator.com/}}
 \end{outline}
 
@@ -488,7 +494,7 @@ Um erro não pode ser deixado no programa, porque não sabemos o que ele pode pr
 
 Warnings podem ser deixados, se compreendemos o que está acontecendo.
 
-Mensagens de \textit{Overfull}, que são azuis no Overleaf, indicam que provavelmente alguma coisa saiu das bordas laterais. COmo o valor é em pontos, e um ponto equivale a um pouco mais de  $0.035$ centímetros, erros pequenos provavelmente não são vistos.
+Mensagens de \textit{Overfull}, que são azuis no Overleaf, indicam que provavelmente alguma coisa saiu das bordas laterais. Como o valor é em pontos, e um ponto equivale a um pouco mais de  $0.035$ centímetros, erros pequenos provavelmente não são vistos.
 
 Mensagens \textit{Underfull}, também azuis no Overleaf, normalmente significam que tem um buraco na sua diagramação. Novamente, pela medida podemos pensar se devemos nos preocupar ou não.
 
@@ -497,10 +503,10 @@ Uma inspeção visual nas bordas e na diagramação geral do documento rapidamen
 Nesse documento, por exemplo, a url que aponta o documento sobre como referenciar figuras deu um erro de $130.28$ pontos, aproximadamente $4.59$ cm, o que provocou que ela saísse não só das bordas da linha, mas também da borda do papel.
 
 
-
-
 \section{Ajuda!}
 O que você gostaria de ver nesse documento? 
+
+
 \section{Agradecimento}
 Agradeço aos alunos que colaboraram revisando este documento. Ele está disponível em: 
 
