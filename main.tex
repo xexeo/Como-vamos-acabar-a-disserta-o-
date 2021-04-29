@@ -8,6 +8,7 @@
 \usepackage{outlines}
 \usepackage{booktabs}
 \usepackage{datetime}
+
 %\usepackage[multiple]{footmisc}
 \usepackage{hyperref}
 \renewcommand{\labelitemi}{$\bullet$}
@@ -21,8 +22,10 @@
 \author{Geraldo Xexéo}
 \date{\today\ - \ \currenttime}
 
-\begin{document}
 
+\addtolength{\parskip}{0.4em}
+
+\begin{document}
 \maketitle
 \tableofcontents
 \section{Introdução}
@@ -30,6 +33,8 @@
 Esse documento apresenta as regras para os alunos de 2017/1 que vão tentar acabar sua dissertação de mestrado, aproveitando o perdão da pandemia.
 
 Não esqueça de ler o \textbf{Guia dos Orientados}\footnote{\url{http://www.xexeo.net/ensino/guia-dos-orientados/}}. Esse documento é uma extensão para esse momento de finalizar a dissertação, onde vamos usar algumas regras mais fortes.
+
+Também não deixe de ler as instruções do pacote \href{https://github.com/xexeo/hacksxexeo/blob/main/dist/hacksxexeo.pdf}{\textbf{hacksxexeo}}\footnote{\url{https://github.com/xexeo/hacksxexeo/blob/main/dist/hacksxexeo.pdf}}.
 
 
 \section{Nosso trabalho conjunto}
@@ -278,43 +283,44 @@ O texto deve ser exclusivamente científico, porém devemos:
 \end{itemize}
 
 
-\subsection{Dicas de formatação}
+\subsection{Tabelas}
 
-Apesar muitos textos usarem tabelas com todas as linhas verticais e horizontais, como na Figura \ref{tab:tab3}, pense em não usá-las, como na Figura \ref{tab:tab4}. \citeauthor{ei} recomenda que devemos dar importância aos dados, não a decoração das tabelas.
+Sempre que for apresentar dados sobre mais de uma coisa, use tabelas. Por exemplo, você pode dizer no texto que, em 2021, 8 alunos de mestrado estavam sendo orientados pelo professor, mas não deve dizer algo como ``em 2018, 8 alunos de mestrado, em 2919, em 2020, 7 e em 2020 8 de novo''. Para isso, use uma tabela e um texto ``o levantamento do número de alunos de mestrado do professor ao longo dos quatro últimos anos é demonstrado na Tabela \ref{tab:prof}''.
 
+Também recomendamos usar o estilo \textbf{booktabs}, que fornece comandos \verb|toprule|, \verb|midrule| e \verb|bottomrule| que substituem de forma mais elegante o \verb|hline| em tabelas. A Tabela \ref{tab:prof} usa esses comandos, enquanto a Tabela \ref{tab:tab3} não os usa.
 
-\begin{table}[htb]
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[]
     \centering
-        \caption{Exemplo de uma tabela normal do \LaTeX .}
-    \begin{tabular}{|c|c|c|}
-    \hline
-        1,1 & 1,2 & 1,3   \\
-        \hline
-        2,1 & 2,2 & 2,3\\
-        \hline
-        3,1 & 3,2 & 3,3\\
-        \hline
-        4,1 & 4,2 & 4,3\\
-        \hline
-        5,1 & 5,2 & 5,3\\
-        \hline
+    \caption{Uma tabela que usa o estilo \textbf{booktabs} e que deixa os dados corretamente apresentados}
+    \label{tab:prof}
+    \begin{tabular}{cc}
+        \toprule
+        Ano  & Alunos \\ \midrule
+        2018 & 8      \\
+        2019 & 6      \\
+        2020 & 7      \\
+        2021 & 8      \\ \bottomrule
     \end{tabular}
-
-    \label{tab:tab3}
 \end{table}
 
+Apesar muitos textos usarem tabelas com todas as linhas verticais e horizontais, como na Figura \ref{tab:tab3}, pense em não usá-las, como na Figura \ref{tab:prof}. \citeauthor{ei} recomenda que devemos dar importância aos dados, não a decoração das tabelas.
+
+
 \begin{table}[htb]
     \centering
-        \caption{Exemplo de uma tabela sem muitas linhas do \LaTeX .}
-    \begin{tabular}{ccc}
+        \caption{Exemplo de uma tabela com todas as bordas, e sem o \textbf{booktabs}.}
+\begin{tabular}{|c|c|}
     \hline
-        1,1 & 1,2 & 1,3   \\
-        2,1 & 2,2 & 2,3\\
-        3,1 & 3,2 & 3,3\\
-        4,1 & 4,2 & 4,3\\
-        5,1 & 5,2 & 5,3\\
-        \hline
-    \end{tabular}\label{tab:tab4}
+    Ano  & Alunos \\ \hline
+    2018 & 8      \\ \hline
+    2019 & 6      \\ \hline
+    2020 & 7      \\ \hline
+    2021 & 8      \\ \hline
+\end{tabular}
+
+    \label{tab:tab3}
 \end{table}
 
 Em alguns lugares se separa \textbf{Tabela} de \textbf{Quadro}, tanto em conteúdo e forma, uma tabela tem dados quantitativos, geralmente números, um quadro tem dados qualitativos, como informações. Na norma, na verdade um documento do IBGE\citep{nat}, as tabelas apresentam bordas laterais abertas, e não precisam de todas as linhas internas. \textbf{Na Coppe}, porém, \textbf{as normas não exigem essa distinção}, e nem citam a existência de quadros. 
@@ -396,7 +402,7 @@ Os seguintes pacotes são recomendados, para ser usados quando necessários:
 \begin{itemize}
     \item \verb!\usepackage{graphicx}!, melhor que o graphics;
     \item \verb!\usepackage{hyperref}!, que \textbf{obrigatoriamente deve ser o último} chamado, para criar links internos, trata urls, além disso ele cria \textit{bookmarks} e facilita muito a vida do leitor. Ele tem um problema: é incompatível com vários outros pacotes. Se algo não funciona como deveria, tente tirar ele e veja se funciona.
-    \item \verb!\usepackage{booktabs}! que fornece linhas mais elegantes para as tabelas (\verb!\toprule!,\verb!\midrule!,\verb!\bottomrule!), as figuras \ref{tab:tab2} e \ref{tab:tab1} mostram a diferença.
+    \item \verb!\usepackage{booktabs}! que fornece linhas mais elegantes para as tabelas (\verb!\toprule!,\verb!\midrule!,\verb!\bottomrule!), as figuras \ref{tab:tab3} e \ref{tab:prof} mostram a diferença.
     \item se necessário, a família dos pacotes de matemática da AMS, \verb!\usepackage{amsmath}! e
     \verb!\usepackage{amsfonts}!, \verb!\usepackage{amssymb}!, e \verb!\usepackage{amsthm}!.
 \end{itemize}
@@ -441,6 +447,7 @@ Os seguintes pacotes são recomendados, para ser usados quando necessários:
 \subsection{Dicas de \LaTeX}
 
 \begin{outline}
+\1 O LaTeX já entende caracteres acentuados, não use os comandos como \verb|\´|
 \1 Dicas de organização do documento \LaTeX:
 \2 Escreva cada frase do parágrafo em uma linha do arquivo, isso facilitará encontrar os erros.
 \2 Não quebre muito o seu arquivo se não for necessário. Capítulos pequenos não precisam ter várias partes.
@@ -449,7 +456,7 @@ Os seguintes pacotes são recomendados, para ser usados quando necessários:
 \2 Temos um grupo de Whatsapp para dúvidas de \LaTeX\footnote{\url{https://chat.whatsapp.com/Kad1ZgFQh1RE8e9PAkcBQA}}, por favor façam essas perguntas por lá, para favorecer a todos. Entrem no grupo!
 \2 Não compliquem o uso do \LaTeX, não se percam com detalhes, peçam ajuda. 
 \2 As figuras e tabelas, e todos os flutuantes, do \LaTeX\  flutuam mesmo, \textbf{não se preocupe} até o momento final da impressão, onde podemos tentar resolver. 
-\2 Se quiser proibir que figuras e tabelas mudem de seção use o pacote \verb!\usepackage[section]{placeins}!, também aconselho a usar sempre \verb!\begin{figure}[hbt]!, que tenta colocar no local, no fim da página ou no topo. 
+\3 Se quiser proibir que figuras e tabelas mudem de seção use o pacote \verb!\usepackage[section]{placeins}!, também aconselho a usar sempre \verb!\begin{figure}[hbt]!, que tenta colocar no local, no fim da página ou no topo. 
 \3 Não gosto da opção \verb!H! do pacote \textbf{float}, porque pouco resolve o problema e às vezes gera outros. Só recomendo usar na edição final para entregar, se quiser resolver algum problema mais grave. Sempre evite usar o \verb!H!.
 \2 Aspas não são feitas com \verb!"! mas sim com \verb!``! no início e \verb!''! no final.
 \3 Não consigo gerar estes caracteres! São o acento grave e o apóstrofe reto, repetidos duas vezes. No teclado ABNT estão do lado esquerdo do 1 e do lado direito do P (com shift). 
@@ -464,11 +471,15 @@ Os seguintes pacotes são recomendados, para ser usados quando necessários:
 \2 Cuidado com as imagens de baixa definição, e também com as de tamanho muito grande, que ao serem reduzidas podem perder detalhes. 
 \2 Desenhos vetoriais funcionam bem no \LaTeX, e existe um pacote bem complexo e difícil de usar chamado \textbf{tikz} que permite desenhar com comandos. 
 \3 Imagens não vetoriais podem perder detalhes, verifique o pdf e a impressão.
-\2 Usando o pacote \textbf{hacksxexeo} é possível cortar um texto! \candrem{Por exemplo, cortei esse aqui.}
-\1 Use um gerador de tabelas online para começar, como o \href{https://www.tablesgenerator.com/}{Tables Generator}\footnote{\url{https://www.tablesgenerator.com/}}
+\2 Usando o pacote \textbf{hacksxexeo} é possível cortar um texto! \candrem{Por exemplo, cortei esse aqui.} O uso dos comandos desse pacote ajuda a saber quem fez o que.)
+\2 Use um gerador de tabelas online para começar a criá-las, como o \href{https://www.tablesgenerator.com/}{Tables Generator}\footnote{\url{https://www.tablesgenerator.com/}}
 \end{outline}
 
+O estilo CoppeTeX já vem, em seu exemplo, com uma lista de símbolos. Para definir um símbolo é necessários seguir o seguinte exemplo:
 
+\begin{verbatim}
+\symbl{$\mathbb{R}$}{Conjunto dos números reais}
+\end{verbatim}
 
 
 \subsection{Errors e Warnings}
@@ -486,18 +497,6 @@ Uma inspeção visual nas bordas e na diagramação geral do documento rapidamen
 Nesse documento, por exemplo, a url que aponta o documento sobre como referenciar figuras deu um erro de $130.28$ pontos, aproximadamente $4.59$ cm, o que provocou que ela saísse não só das bordas da linha, mas também da borda do papel.
 
 
-\section{A Bibliografia}
-
-O pacote \textbf{hacksxexeo} permite o uso do bib\LaTeX, porém é necessário alterar a a configuração do pacote Coppe\TeX. Para isso é necessário comentar a seguinte linha do arquivo \textbf{coppe-plai} (já comentada), possivelmente a linha 56 do arquivo:
-
-\begin{verbatim}
-    %\RequirePackage[sort&compress]{natbib}
-\end{verbatim}
-
-Para imprimir a bibliografia, use o comando:
-\begin{verbatim}
-    \printbibliography
-\end{verbatim}
 
 
 \section{Ajuda!}
