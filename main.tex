@@ -2,12 +2,13 @@
 \usepackage[T1]{fontenc}
 \usepackage{csquotes}
 \usepackage[brazilian]{babel}
-\usepackage[biblatex,rascunhos,anonimizar,assuntos,sugestoes,comentarios]{hacksxexeo} 
+\usepackage[natbib]{biblatex}
+\usepackage[edicao]{hacksxexeo} 
 \usepackage[normalem]{ulem}
 \usepackage{outlines}
 \usepackage{booktabs}
 \usepackage{datetime}
-
+\usepackage{awesomebox}
 %\usepackage[multiple]{footmisc}
 \usepackage{hyperref}
 \renewcommand{\labelitemi}{$\bullet$}
@@ -31,12 +32,13 @@
 
 Esse documento apresenta as regras para os alunos de 2017/1 que vão tentar acabar sua dissertação de mestrado, aproveitando o perdão da pandemia.
 
-A última versão desse documento pode ser encontrada em \href{https://github.com/xexeo/Como-vamos-acabar-a-disserta-o-}{\url{https://github.com/xexeo/Como-vamos-acabar-a-disserta-o-}}
+\notebox{A última versão desse documento pode ser encontrada em \href{https://github.com/xexeo/Como-vamos-acabar-a-disserta-o-}{\url{https://github.com/xexeo/Como-vamos-acabar-a-disserta-o-}}}
 
+\importantbox{
 Não esqueça de ler o \textbf{Guia dos Orientados}\footnote{\url{http://www.xexeo.net/ensino/guia-dos-orientados/}}. Esse documento é uma extensão para esse momento de finalizar a dissertação, onde vamos usar algumas regras mais fortes.
 
 Também não deixe de ler as instruções do pacote \href{https://github.com/xexeo/hacksxexeo/blob/main/dist/hacksxexeo.pdf}{\textbf{hacksxexeo}}\footnote{\url{https://github.com/xexeo/hacksxexeo/blob/main/dist/hacksxexeo.pdf}}.
-
+}
 
 \section{Nosso trabalho conjunto}
 
@@ -465,8 +467,8 @@ Os seguintes pacotes são recomendados, para ser usados quando necessários:
 \2 As figuras e tabelas, e todos os flutuantes, do \LaTeX\  flutuam mesmo, \textbf{não se preocupe} até o momento final da impressão, onde podemos tentar resolver. 
 \3 Se quiser proibir que figuras e tabelas mudem de seção use o pacote \verb!\usepackage[section]{placeins}!, também aconselho a usar sempre \verb!\begin{figure}[hbt]!, que tenta colocar no local, no fim da página ou no topo. 
 \3 Não gosto da opção \verb!H! do pacote \textbf{float}, porque pouco resolve o problema e às vezes gera outros. Só recomendo usar na edição final para entregar, se quiser resolver algum problema mais grave. Sempre evite usar o \verb!H!.
-\2 Aspas não são feitas com \verb!"! mas sim com \verb!``! no início e \verb!''! no final.
-\3 Não consigo gerar estes caracteres! São o acento grave e o apóstrofe reto, repetidos duas vezes. No teclado ABNT estão do lado esquerdo do 1 e do lado direito do P (com shift). 
+\2 Aspas não são feitas com aspas (\verb!"!) mas sim com dois acentos graves (\`{}\`{}) no início e (\textquotesingle\textquotesingle), dois apóstrofes retos, no final.
+\3 No teclado ABNT estão do lado esquerdo do 1 e do lado direito do P (com shift). 
 \2 Controle o tamanho das imagens com as opções do comando \textbf{includegraphics}, como em:
 
  \verb!\includegraphics[width=0.5\linewidth]{arquivo}!, 
@@ -483,7 +485,6 @@ Os seguintes pacotes são recomendados, para ser usados quando necessários:
 \end{outline}
 
 O estilo CoppeTeX já vem, em seu exemplo, com uma lista de símbolos. Para definir um símbolo é necessários seguir o seguinte exemplo:
-
 \begin{verbatim}
 \symbl{$\mathbb{R}$}{Conjunto dos números reais}
 \end{verbatim}
